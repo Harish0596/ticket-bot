@@ -4,9 +4,30 @@ from __future__ import unicode_literals
 
 from rasa_core.actions.action import Action
 from rasa_core.events import SlotSet
+from rasa_core.events import AllSlotsReset
 
 from soup import searchWeatherDetails, searchWordMeaning, translateGoogle
 from details import getTicketStatus, getCustomerDetails, getOrderDetails
+# import time
+#
+# st = 0
+#
+#
+# class startTime(Action):
+#     def name(self):
+#         return 'start_time'
+#
+#     def run(self, dispatcher, tracker, domain):
+#         global st
+#         st = int(time.time())
+
+
+class checkTime(Action):
+    def name(self):
+        return 'check_time'
+
+    def run(self, dispatcher, tracker, domain):
+        return [AllSlotsReset()]
 
 
 class GetCustomerDetails(Action):
@@ -14,6 +35,7 @@ class GetCustomerDetails(Action):
         return 'utter_customer_details'
 
     def run(self, dispatcher, tracker, domain):
+        tracker.latest_message()
         customerId = str(tracker.get_slot('iD'))
         message = getCustomerDetails(customerId)
         if message == "None":
@@ -56,13 +78,10 @@ class GetWeatherDetails(Action):
         return 'utter_weather_details'
 
     def run(self, dispatcher, tracker, domain):
-        location = str(tracker.get_slot('location'))
-        if location == 'None':
-            dispatcher.utter_message('You will have to provide the location for me to get you the weather details  ')
-        else:
-            message = searchWeatherDetails(location)
-            dispatcher.utter_message(message)
-        return [SlotSet('location', None)]
+        location = str(tracker.get_slot('GPE'))
+        message = searchWeatherDetails(location)
+        dispatcher.utter_message(message)
+        return [SlotSet('GPE', None), SlotSet('searchType', None)]
 
 
 class GetWordMeaning(Action):
@@ -70,13 +89,10 @@ class GetWordMeaning(Action):
         return 'utter_word_meaning'
 
     def run(self, dispatcher, tracker, domain):
-        word = str(tracker.get_slot('query'))
-        if word == 'None':
-            dispatcher.utter_message('What meaning would you like to know?')
-        else:
-            message = searchWordMeaning(word)
-            dispatcher.utter_message(message)
-        return [SlotSet('query', None)]
+        word = str(tracker.get_slot('searchWord'))
+        message = searchWordMeaning(word)
+        dispatcher.utter_message(message)
+        return [SlotSet('searchWord', None), SlotSet('searchType', None)]
 
 
 class GetTranslation(Action):
@@ -84,11 +100,20 @@ class GetTranslation(Action):
         return 'utter_translate_data'
 
     def run(self, dispatcher, tracker, domain):
-        word = str(tracker.get_slot('word'))
+        word = str(tracker.get_slot('searchWord'))
         language = str(tracker.get_slot('language'))
-        if (word == 'None') or (language == 'None'):
-            dispatcher.utter_message("You have to provide the word and language in order for me to translate")
-        else:
-            message = translateGoogle(word, language)
-            dispatcher.utter_message(message)
-            return [SlotSet('language', None)]
+        message = translateGoogle(word, language)
+        dispatcher.utter_message(message)
+        return [SlotSet('searchWord', None), SlotSet('searchType', None)]
+
+
+class ActionFallback(Action):
+    def name(self):
+        return "fallback"
+
+    def run(self, dispatcher, tracker, domain):
+        from rasa_core.events import UserUtteranceReverted
+
+        dispatcher.utter_message("Sorry, didn't get that. Try again.")
+        return [UserUtteranceReverted()]
+

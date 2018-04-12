@@ -62,118 +62,116 @@
 - Give me the [customer](idType) details of [832](iD)
 - that is about a [ticket](idType)
 
-## intent:weather_details
-- get me the weather of [chennai](location)
-- get me the weather for [banglore](location)
-- get me the weather for [mumbai tomorrow](location)
-- weather today in [london](location)
-- [new york](location) weather
-- what is the weather in [kolkata](location)
-- what is the weather in [Azerbaijan tomorrow](location) 
-- what is the weather in [vatican yesterday](location)
-- climate in [Dubai](location)
-- temperature in [new jersey](location)
-- [delhi's](location) temperature
-- [chennai's](location) weather
-- weather in [toronto](location)
-- weather in [kingston](location)
-- what is the weather in [new south wales](location)
-- [washington dc](location) weather
-- [washington dc](location) temperature
-- [delhi](location) temperature
-- [chennai](location) weather
-- [new delhi's](location) temperature
-- [new delhi's](location) climate
-- [delhi's](location) climate
-- [chennai](location) climate
-- [washington dc](location) climate
-- [delhi](location) climate
-- [navi mumbai](location) climate
-- [new delhi's](location) climate
-- [new jersey's](location) weather
-- i want to know the weather details of weather in [paris](location)
-- i want to know the [barcelona's](location) weather details 
-- i need [vijayawada's](location) temperature
-- what is the temperature in [new delhi](location)
-- what is weather in [washington dc](location)
-- what is [new york's](location) weather 
-- tell me [srinagar](location) temperature
-- tell me [kochi](location) temperature
-- tell me the temperature in [lucknow](location)
-- What is the weather report of [kolkata](location)
-- what about weather in [tanjore](location)
-- what is the temperature in [hyderabad](location)
-- weather in [london](location)
-- location is [chennai](location)
-- location is [new york](location)
-- [chennai](location) is the location 
-- [new york](location) is the location
-- in [chennai](location)
-- in [navi mumbai](location)
-- how's the climate
-- how is climate
-- how about temperature
-- how's weather
-- how about the weather
-- location is [new delhi](location)
-- location is [pune](location)
-
-## intent:word_meaning
-- get me the meaning of [life](query)
-- give me the meaning of [mouse](query)
-- meaning for [computer](query)
-- meaning for the word [rat](query)
-- what is the meaning of [keyboard](query)
-- find meaning for word [pencil box](query)
-- find meaning for word [mountain](query)
-- what is the meaning of [tumbling](query)?
-- meaning of [falling](query)
-- what is the meaning of [columns](query)
-- what is the meaning of [serenity](query)?
-- what does [tranquility](query) mean?
-- what is the meaning of [peacefullness](query)?
-- what does [organic chemistry](query) mean?
-- what is the meaning of [internal state](query)?
-- [pandemonium](query) means?
-- [ghost rider](query) meaning
-- [lemon spoon](query) meaning
-- [ghost](query) meaning
-- [lemon](query) meaning
-- [anxious](query) means
-- [bottle](query) word meaning
-- [bottle neck](query) word meaning
-- [ticket](query) meaning
-- meaning for word [dog](query)
-- meaning of [thank you](query)
-- what is the meaning of [come again](query)
-- meaning for [water](query)
-- meaning for [bottle](query)
-- I want to know meaning for [cloud computing](query).
-- meaning of [cloud computing](query).
-- meaning for [water bottle](query)
-- meaning for [eye balls](query)
-- meaning for [distilled water](query)
-
-## intent:translate_data
-- [dog](word) in [tamil](language)
-- translate [cook](word) to [hindi](language)
-- i want you to translate [computer](word) to [tamil](language)
-- [umbrella](word) to [spanish](language)
-- translate [mouse](word) to [telugu](language)
-- translate [bull](word) to [tamil](language) 
-- [horse](word) in [Hindi](language)
-- translate [orange](word) to [Malayalam](language)
-- what is [tiger](word) in [Tamil](language)
-- what is [apple](word) in [Korean](language)
-- what is [football](word) in [Japanese](language) 
-- what's the translation of [insecure](word) in [Bengali](language)
-- tell me the translation of [tense](word) in [Tamil](language)
-- what does [stationed](word) mean in [Tamil](language)
-- what does [edgy](word) mean in [French](language)?
-- what is the meaning of [agitated](word) in [Kannada](language)
-- what is the translation of [worried](word) in [Tamil](language)?
-- what is the meaning of [cool](word) in [Spanish](language)?
-- what is [monster](word) in [hindi](language)?
+## intent:addons
+- [meaning](searchType)
+- [means](searchType)
+- [translate](searchType)
+- [translation](searchType)
+- [weather](searchType)
+- [climate](searchType)
+- [temperature](searchType)
+- get me the [weather](searchType) of [chennai](GPE)
+- get me the [weather](searchType) for [banglore](GPE)
+- get me the [weather](searchType) for [mumbai tomorrow](GPE)
+- [weather](searchType) [today in london](GPE)
+- [new york](GPE) [weather](searchType)
+- what is the [weather](searchType) in [kolkata](GPE)
+- what is the [weather](searchType) in [Azerbaijan tomorrow](GPE) 
+- what is the [weather](searchType) in [vatican yesterday](GPE)
+- [climate](searchType) in [Dubai](GPE)
+- [temperature](searchType) in [new jersey](GPE)
+- [delhi's](GPE) [temperature](searchType)
+- [chennai's](GPE) [weather](searchType)
+- [weather](searchType) in [toronto](GPE)
+- [weather](searchType) in [kingston](GPE)
+- what is the [weather](searchType) in [new south wales](GPE)
+- [washington dc](GPE) [temperature](searchType)
+- [delhi](GPE) [temperature](searchType)
+- [chennai](GPE) [weather](searchType)
+- [new delhi's](GPE) [temperature](searchType)
+- [new delhi's](GPE) [climate](searchType)
+- [delhi's](GPE) [climate](searchType)
+- [chennai](GPE) [climate](searchType)
+- [washington dc](GPE) [climate](searchType)
+- [delhi](GPE) [climate](searchType)
+- [navi mumbai](GPE) [climate](searchType)
+- [new delhi's](GPE) [climate](searchType)
+- [new jersey's](GPE) [weather](searchType)
+- i want to know the [weather](searchType) details of [weather](searchType) in [paris](GPE)
+- i want to know the [barcelona's](GPE) [weather](searchType) details 
+- i need [vijayawada's](GPE) [temperature](searchType)
+- what is the [temperature](searchType) in [new delhi](GPE)
+- what is [weather](searchType) in [washington dc](GPE)
+- what is [new york's](GPE) [weather](searchType) 
+- tell me [srinagar](GPE) [temperature](searchType)
+- tell me [kochi](GPE) [temperature](searchType)
+- tell me the [temperature](searchType) in [lucknow](GPE)
+- What is the [weather](searchType) report of [kolkata](GPE)
+- what about [weather](searchType) in [tanjore](GPE)
+- what is the [temperature](searchType) in [hyderabad](GPE)
+- [weather](searchType) in [london](GPE)
+- location is [chennai](GPE)
+- location is [new york](GPE)
+- [new york](GPE) is the location
+- in [chennai](GPE)
+- in [navi mumbai](GPE)
+- how's the [climate](searchType)
+- how is [climate](searchType)
+- how about [temperature](searchType)
+- how's [weather](searchType)
+- how about the [weather](searchType)
+- location is [new delhi](GPE)
+- location is [pune](GPE)
+- get me the [meaning](searchType) of [life](searchWord)
+- give me the [meaning](searchType) of [mouse](searchWord)
+- [meaning](searchType) for [computer](searchWord)
+- [meaning](searchType) for the word [rat](searchWord)
+- what is the [meaning](searchType) of [keyboard](searchWord)
+- find [meaning](searchType) for word [pencil box](searchWord)
+- find [meaning](searchType) for word [mountain](searchWord)
+- what is the [meaning](searchType) of [tumbling](searchWord)?
+- [meaning](searchType) of [falling](searchWord)
+- what is the [meaning](searchType) of [columns](searchWord)
+- what is the [meaning](searchType) of [serenity](searchWord)?
+- what does [tranquility](searchWord) [mean](searchType)?
+- what is the [meaning](searchType) of [peacefullness](searchWord)?
+- what does [organic chemistry](searchWord) [mean](searchType)?
+- what is the [meaning](searchType) of [internal state](searchWord)?
+- [pandemonium](searchWord) [means](searchType)?
+- [ghost rider](searchWord) [meaning](searchType)
+- [lemon spoon](searchWord) [meaning](searchType)
+- [ghost](searchWord)
+- [lemon](searchWord)
+- [anxious](searchWord) [means](searchType)
+- [bottle](searchWord) word [meaning](searchType)
+- [bottle neck](searchWord) word [meaning](searchType)
+- [ticket](searchWord)
+- [meaning](searchType) for word [dog](searchWord)
+- [meaning](searchType) of [thank you](searchWord)
+- what is the [meaning](searchType) of [come again](searchWord)
+- [meaning](searchType) for [water](searchWord)
+- [meaning](searchType) for [bottle](searchWord)
+- I want to know [meaning](searchType) for [cloud computing](searchWord).
+- [meaning](searchType) of [cloud computing](searchWord).
+- [meaning](searchType) for [water bottle](searchWord)
+- [meaning](searchType) for [eye balls](searchWord)
+- [meaning](searchType) for [distilled water](searchWord)
+- [dog](searchWord) in [tamil](language)
+- [translate](searchType) [cook](searchWord) to [hindi](language)
+- i want you to [translate](searchType) [computer](searchWord) to [tamil](language)
+- [umbrella](searchWord) to [spanish](language)
+- [translate](searchType) [mouse](searchWord) to [telugu](language)
+- [translate](searchType) [bull](searchWord) to [tamil](language) 
+- [horse](searchWord) in [Hindi](language)
+- [translate](searchType) [orange](searchWord) to [Malayalam](language)
+- what's the [translation](searchType) of [insecure](searchWord) in [Bengali](language)
+- tell me the [translation](searchType) of [tense](searchWord) in [Tamil](language)
+- what does [stationed](searchWord) mean in [Tamil](language)
+- what does [edgy](searchWord) mean in [French](language)?
+- what is the [translation](searchType) of [worried](searchWord) in [Tamil](language)?
+- [telugu](language)
+- [malayalam](language)
+- [japanese](language)
 
 ## intent:smalltalk.agent.acquaintance
 - tell me about your personality
@@ -1946,3 +1944,6 @@
 - i am not okay with your help
 - don't want
 - do not
+
+##regex:iD
+- [0-9]{3}

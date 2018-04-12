@@ -1,5 +1,4 @@
 slots:
-slots:
   iD:
     type: text
   idType:
@@ -8,28 +7,34 @@ slots:
       - ticket
       - customer
       - order
-  word:
+  searchWord:
     type: text
+  searchType:
+    type: categorical
+    values:
+      - weather
+      - climate
+      - temperature
+      - mean
+      - means
+      - meaning
+      - translate
+      - translation
   language:
     type: text
-  location:
-    type: text
-  query:
+  GPE:
     type: text
 
 entities:
   - iD
   - idType
   - language
-  - location
-  - word
-  - query
+  - searchWord
+  - searchType
 
 intents:
   - details
-  - weather_details
-  - word_meaning
-  - translate_data
+  - addons
   - smalltalk.agent.acquaintance
   - smalltalk.agent.age
   - smalltalk.agent.annoying
@@ -148,6 +153,22 @@ templates:
         - 'Enter the id of the customer'
         - 'Sure please tell the customer id'
         - 'What is the customer id?'
+
+    utter_specific:
+        - 'Can you please be more specific?'
+
+    utter_ask_location:
+        - 'Please tell the location'
+        - 'Location please'
+        - 'In which location?'
+
+    utter_ask_language:
+        - 'Into which language'
+        - 'To language?'
+
+    utter_ask_word:
+        - 'Word please'
+        - 'Word?'
 
     utter_smalltalk.agent.acquaintance:
         - "I'm a virtual agent"
@@ -595,6 +616,8 @@ templates:
         - "Okay then."
 
 actions:
+  - actions.checkTime
+  - actions.ActionFallback
   - actions.GetTicketDetails
   - actions.GetCustomerDetails
   - actions.GetOrderDetails
@@ -605,6 +628,10 @@ actions:
   - utter_ask_customerId
   - utter_ask_ticketId
   - utter_ask_orderId
+  - utter_specific
+  - utter_ask_location
+  - utter_ask_language
+  - utter_ask_word
   - utter_smalltalk.agent.acquaintance
   - utter_smalltalk.agent.age
   - utter_smalltalk.agent.annoying

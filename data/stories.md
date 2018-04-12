@@ -21,7 +21,7 @@
     - slot{"idType": null}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
     
 ## Generated Story -2992657373646789301
 * smalltalk.greetings.hello
@@ -38,11 +38,11 @@
     - utter_ticket_details
     - slot{"iD": null}
     - slot{"idType": null}
-* word_meaning{"query": "volcano"}
-    - slot{"query": "volcano"}
+* word_meaning{"searchWord": "volcano"}
+    - slot{"searchWord": "volcano"}
     - utter_word_meaning
-    - slot{"query": "volcano"}
-    - export
+    - slot{"searchWord": "volcano"}
+    - export_stories
     
 ## Generated Story 2865882562750618852
 *details[idType=order]
@@ -65,7 +65,7 @@
     - slot{"idType": null}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
     
 ## Generated Story 1898075721670813957
 * details{"iD": "234"}
@@ -84,7 +84,7 @@
     - utter_order_details
     - slot{"iD": null}
     - slot{"idType": null}
-    - export
+    - export_stories
     
 ## Generated Story -1177223172556933666
 * details{"idType": "order", "iD": "241"}
@@ -105,7 +105,7 @@
     - utter_ticket_details
     - slot{"iD": null}
     - slot{"idType": null}
-    - export
+    - export_stories
 
 ## Generated Story -7569884815734624802
 * details{"idType": "customer", "iD": "153"}
@@ -314,6 +314,7 @@
 ## story 47
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
+    - export_stories
     
 ## story 48
 * smalltalk.greetings.goodevening
@@ -486,7 +487,7 @@
     - utter_smalltalk.agent.residence
 * smalltalk.dialog.i_do_not_care
     - utter_smalltalk.dialog.i_do_not_care
-    - export
+    - export_stories
 
 ## Generated Story -5110094331105097806
 * smalltalk.agent.boss
@@ -509,7 +510,7 @@
     - utter_smalltalk.user.will_be_back
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
 
 ## Generated Story -3529337101618034170
 * smalltalk.user.needs_advice
@@ -532,7 +533,7 @@
     - utter_smalltalk.agent.talk_to_me
 * smalltalk.greetings.goodnight
     - utter_smalltalk.greetings.goodnight
-    - export
+    - export_stories
     
 ## Generated Story -774659883649367298
 * smalltalk.greetings.hello
@@ -567,17 +568,17 @@
     - utter_smalltalk.agent.bad
 * smalltalk.agent.ready
     - utter_smalltalk.agent.ready
-    - export
+    - export_stories
     
 ## Generated Story 81968000704856425
 * smalltalk.greetings.hello
     - utter_smalltalk.greetings.hello
 * smalltalk.agent.acquaintance
     - utter_smalltalk.agent.acquaintance
-* word_meaning{"query": "life"}
-    - slot{"query": "life"}
+* word_meaning{"searchWord": "life"}
+    - slot{"searchWord": "life"}
     - utter_word_meaning
-    - slot{"query": "life"}
+    - slot{"searchWord": "life"}
 * smalltalk.agent.age
     - utter_smalltalk.agent.age
 * smalltalk.user.loves_agent
@@ -608,13 +609,13 @@
     - utter_smalltalk.agent.origin
 * smalltalk.agent.can_you_help
     - utter_smalltalk.agent.can_you_help
-* word_meaning{"query": "life"}
-    - slot{"query": "life"}
+* word_meaning{"searchWord": "life"}
+    - slot{"searchWord": "life"}
     - utter_word_meaning
-    - slot{"query": "life"}
+    - slot{"searchWord": "life"}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
 
 ## Generated Story 8693651355703284500
 * smalltalk.greetings.hello
@@ -637,7 +638,7 @@
     - utter_smalltalk.greetings.bye
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
     
 ## Generated Story -7004009866161409666
 * smalltalk.greetings.hello
@@ -648,10 +649,10 @@
     - utter_smalltalk.agent.bad
 * smalltalk.agent.my_friend
     - utter_smalltalk.agent.my_friend
-* word_meaning{"query": "life"}
-    - slot{"query": "life"}
+* word_meaning{"searchWord": "life"}
+    - slot{"searchWord": "life"}
     - utter_word_meaning
-    - slot{"query": "life"}
+    - slot{"searchWord": "life"}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
     
@@ -688,7 +689,7 @@
     - utter_smalltalk.agent.funny
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
     
 ## Generated Story 3305754651254573658
 * weather_details{"location": "chennai"}
@@ -697,7 +698,7 @@
     - slot{"location": "chennai"}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
     
 ## Generated Story 338124212683510588
 * smalltalk.greetings.hello
@@ -706,10 +707,10 @@
     - slot{"location": "chennai"}
     - utter_weather_details
     - slot{"location": "chennai"}
-* word_meaning{"query": "ambience"}
-    - slot{"query": "ambience"}
+* word_meaning{"searchWord": "ambience"}
+    - slot{"searchWord": "ambience"}
     - utter_word_meaning
-    - slot{"query": "ambience"}
+    - slot{"searchWord": "ambience"}
 * weather_details
     - utter_weather_details
     - slot{"location": "chennai"}
@@ -756,14 +757,14 @@
     - slot{"language": "hindi"}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
 
 ## Generated Story -3681318527859370762
-* word_meaning{"query": "life"}
-    - slot{"query": "life"}
+* word_meaning{"searchWord": "life"}
+    - slot{"searchWord": "life"}
     - utter_word_meaning
-    - slot{"query": "life"}
-    - export
+    - slot{"searchWord": "life"}
+    - export_stories
 
 ## Generated Story -4702572233000900618
 * smalltalk.greetings.hello
@@ -826,10 +827,10 @@
     - utter_order_details
     - slot{"iD": null}
     - slot{"idType": null}
-* word_meaning{"query": "life"}
-    - slot{"query": "life"}
+* word_meaning{"searchWord": "life"}
+    - slot{"searchWord": "life"}
     - utter_word_meaning
-    - slot{"query": "life"}
+    - slot{"searchWord": "life"}
 * details{"idType": "ticket", "iD": "234"}
     - slot{"idType": "ticket"}
     - slot{"iD": "234"}
@@ -840,7 +841,7 @@
     - utter_smalltalk.appraisal.thank_you
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
     
  ## Generated Story 1803862044791158966
 * smalltalk.greetings.hello
@@ -871,7 +872,7 @@
     - utter_ticket_details
     - slot{"iD": null}
     - slot{"idType": null}
-    - export
+    - export_stories
 
 ## Generated Story -4668603640186636894
 * smalltalk.greetings.hello
@@ -890,7 +891,8 @@
     - utter_smalltalk.appraisal.thank_you
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
+    
 ## Generated Story -970508392420932952
 * smalltalk.greetings.hello
     - utter_smalltalk.greetings.hello
@@ -902,10 +904,10 @@
     - slot{"location": "london"}
     - utter_weather_details
     - slot{"location": null}
-* word_meaning{"query": "temperature"}
-    - slot{"query": "temperature"}
+* word_meaning{"searchWord": "temperature"}
+    - slot{"searchWord": "temperature"}
     - utter_word_meaning
-    - slot{"query": null}
+    - slot{"searchWord": null}
 * translate_data{"word": "temperature", "language": "tamil"}
     - slot{"word": "temperature"}
     - slot{"language": "tamil"}
@@ -915,11 +917,11 @@
     - utter_smalltalk.greetings.bye
 * word_meaning
     - utter_word_meaning
-    - slot{"query": null}
-* word_meaning{"query": "hassle"}
-    - slot{"query": "hassle"}
+    - slot{"searchWord": null}
+* word_meaning{"searchWord": "hassle"}
+    - slot{"searchWord": "hassle"}
     - utter_word_meaning
-    - slot{"query": null}
+    - slot{"searchWord": null}
 * smalltalk.appraisal.good
     - utter_smalltalk.appraisal.good
 * weather_details
@@ -992,4 +994,4 @@
     - slot{"idType": null}
 * smalltalk.greetings.bye
     - utter_smalltalk.greetings.bye
-    - export
+    - export_stories
