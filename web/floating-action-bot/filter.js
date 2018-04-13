@@ -41,12 +41,8 @@ function closechat() {
 }
 
 function start(msg) {
-    let li = document.createElement('li');
-    li.appendChild(document.createTextNode(msg));
-    li.className = "sender"
-    ul.appendChild(li);
-    respond(msg)
-    chat.scrollTop = chat.scrollHeight;
+    createSender(msg);
+    respond(msg);
 }
 
 function speak(msg) {
@@ -78,8 +74,8 @@ function send() {
     let message = document.getElementById('chat-input').value;
     if (message != '') {
         createSender(message);
-        respond(message);
         document.getElementById('typing').style.display = "inline";
+        respond(message);
     }
 }
 
@@ -92,6 +88,7 @@ function respond(msg) {
         body: JSON.stringify(data)
     })
         .then(function (response) {
+            document.getElementById('typing').style.display = "none";
             return response.json();
         })
         .then(function (responses) {
@@ -106,9 +103,9 @@ function respond(msg) {
 
         })
         .catch(function (err) {
+            document.getElementById('typing').style.display = "none";
             createResponder("I'm having some technical issues. Try again later :)");
         });
-
 }
 
 function voice() {

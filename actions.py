@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 from rasa_core.actions.action import Action
 from rasa_core.events import SlotSet
 
-from soup import searchWeatherDetails, searchWordMeaning, translateGoogle, searchRestaurants
-from details import getTicketStatus, getCustomerDetails, getOrderDetails
+from soup import search_weather_details, search_word_meaning, translate_word, search_restaurants
+from details import get_ticket_status, get_customer_details, get_order_details
 
 
 class GetCustomerDetails(Action):
@@ -14,8 +14,8 @@ class GetCustomerDetails(Action):
         return 'utter_customer_details'
 
     def run(self, dispatcher, tracker, domain):
-        customerId = str(tracker.get_slot('iD'))
-        message = getCustomerDetails(customerId)
+        customer_id = str(tracker.get_slot('iD'))
+        message = get_customer_details(customer_id)
         if message == "None":
             dispatcher.utter_message("Customer not found")
         else:
@@ -28,8 +28,8 @@ class GetTicketDetails(Action):
         return 'utter_ticket_details'
 
     def run(self, dispatcher, tracker, domain):
-        ticketId = str(tracker.get_slot('iD'))
-        message = getTicketStatus(ticketId)
+        ticket_id = str(tracker.get_slot('iD'))
+        message = get_ticket_status(ticket_id)
         if message == "None":
             dispatcher.utter_message("No ticket exists with that id")
         else:
@@ -42,8 +42,8 @@ class GetOrderDetails(Action):
         return 'utter_order_details'
 
     def run(self, dispatcher, tracker, domain):
-        orderId = str(tracker.get_slot('iD'))
-        message = getOrderDetails(orderId)
+        order_id = str(tracker.get_slot('iD'))
+        message = get_order_details(order_id)
         if message == "None":
             dispatcher.utter_message("Order id does not exist")
         else:
@@ -60,7 +60,7 @@ class GetWeatherDetails(Action):
         if location == 'None':
             dispatcher.utter_message('You will have to provide the location for me to get you the weather details  ')
         else:
-            message = searchWeatherDetails(location)
+            message = search_weather_details(location)
             dispatcher.utter_message(message)
         return [SlotSet('location', None)]
 
@@ -74,7 +74,7 @@ class GetWordMeaning(Action):
         if word == 'None':
             dispatcher.utter_message('What meaning would you like to know?')
         else:
-            message = searchWordMeaning(word)
+            message = search_word_meaning(word)
             dispatcher.utter_message(message)
         return [SlotSet('query', None)]
 
@@ -89,7 +89,7 @@ class GetTranslation(Action):
         if (word == 'None') or (language == 'None'):
             dispatcher.utter_message("You have to provide the word and language in order for me to translate")
         else:
-            message = translateGoogle(word, language)
+            message = translate_word(word, language)
             dispatcher.utter_message(message)
             return [SlotSet('language', None)]
 
@@ -101,6 +101,6 @@ class GetRestaurant(Action):
     def run(self, dispatcher, tracker, domain):
         area = str(tracker.get_slot('area'))
         cuisine = str(tracker.get_slot('cuisine'))
-        response = searchRestaurants(area, cuisine)
+        response = search_restaurants(area, cuisine)
         dispatcher.utter_message(response)
         return [SlotSet('area', None)]

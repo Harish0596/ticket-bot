@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def searchWeatherDetails(location):
+def search_weather_details(location):
     try:
         s = requests.Session()
         s.headers[
@@ -20,7 +20,7 @@ def searchWeatherDetails(location):
     return result
 
 
-def searchWordMeaning(query):
+def search_word_meaning(query):
     try:
         s = requests.Session()
         s.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
@@ -34,7 +34,7 @@ def searchWordMeaning(query):
     return result
 
 
-def translateGoogle(word, language):
+def translate_word(word, language):
     try:
         s = requests.Session()
         s.headers[
@@ -48,7 +48,7 @@ def translateGoogle(word, language):
     return translated
 
 
-def searchRestaurants(area, cuisine):
+def search_restaurants(area, cuisine):
     try:
         res = []
         s = requests.Session()
@@ -68,4 +68,4 @@ def searchRestaurants(area, cuisine):
 
 
 if __name__ == '__main__':
-    print(searchRestaurants("chennai", "tamil"))
+    print(search_restaurants("chennai", "tamil"))
