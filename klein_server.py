@@ -3,8 +3,6 @@ import logging
 from rasa_core.agent import Agent
 from rasa_core.channels.direct import CollectingOutputChannel
 from rasa_core.interpreter import RasaNLUInterpreter
-
-from filter import intent_status
 import yaml
 from flask import json
 from klein import Klein
@@ -12,25 +10,6 @@ from klein import Klein
 logger = logging.getLogger(__name__)
 
 checkFirstRequest = 0
-
-
-class Users:
-    def __init__(self):
-        self.users = []
-
-    def add_user(self, sender_id, status):
-        self.users.append(dict({"sender_id": sender_id, "status": status}))
-
-    def get_user(self, sender_id):
-        return [user for user in self.users if user['sender_id'] == sender_id]
-
-    def remove_user(self, sender_id):
-        self.users = [user for user in self.users if user['sender_id'] != sender_id]
-
-    def update_status(self, sender_id, status):
-        for user in self.users:
-            if user.get('sender_id') == sender_id:
-                user.update(dict({'sender_id': sender_id, 'status': status}))
 
 
 def read_yaml():
@@ -74,7 +53,7 @@ def custom_filter(query, parsed_data, respond_data):
         low_confidence_response = [low_confidence_response.get('utter'), "Did i give you the right response?"]
         return low_confidence_response
     elif confidence < 20 or (intent_name == "confirmation.yes" and check_intent == 1):
-        intent_status(query_to_add, file_name)
+        add_data(query_to_add, file_name)
         confidence_score_array = []
         check_intent = 0
         msg = ["I will keep that in mind"]
@@ -84,13 +63,28 @@ def custom_filter(query, parsed_data, respond_data):
         return respond_data
 
 
-check = 0
+def format_data(nlu_dir, value):
+        text = value.get('text')
+        entities = value.get('entities')
+        text_split = text.split()
+        for entity in entities:
+            text_split = [txt.replace(entity.get('entity_value'),
+                                      "[{}]({})".format(entity.get('entity_value'), entity.get('entity'))) for txt in
+                          text_split]
+        value = " ".join(text_split)
+        with open(nlu_dir, "a+") as data:
+            if data.write("\n- {}".format(value)):
+                print("Successfully added {} into {}".format(value, data.name))
+            else:
+                print("Failed to add {} into {}".format(value, data.name))
 
-users = Users()
+
+def add_data(intent, message):
+    format_data(("./data/nlu/" + intent + ".md"), message)
 
 
 def low_confidence_filter(query, sender_id, parsed_data, respond_data):
-    global check, intent_to_add, data_to_add
+    global intent_to_add, data_to_add
     intent_name = parsed_data.get('tracker').get('latest_message').get('intent').get('name')
     confidence = parsed_data.get('tracker').get('latest_message').get('intent').get('confidence') * 100
     entities = parsed_data.get('tracker').get('latest_message').get('entities')
@@ -103,8 +97,8 @@ def low_confidence_filter(query, sender_id, parsed_data, respond_data):
             intent_name == "confirmation.no" and status == 1):
 
         if intent_name == "confirmation.yes" and status == 1:
+            add_data(users.get_user(sender_id)[0].get('intent'), users.get_user(sender_id)[0].get('message'))
             users.remove_user(sender_id)
-            intent_status(data_to_add, intent_to_add)
             return ["I will keep that in mind. Thank you for your response"]
         elif intent_name == "confirmation.no" and status == 1:
             users.remove_user(sender_id)
@@ -120,7 +114,7 @@ def low_confidence_filter(query, sender_id, parsed_data, respond_data):
                 intent_to_add = intent_name
                 data_to_add = {"text": query, "entities": entity_list}
                 respond_data.append("Did i give you the right response?")
-            users.update_status(sender_id, 1)
+            users.update_status(sender_id, 1, intent_to_add, data_to_add)
             return respond_data
     else:
         if status == 1:
@@ -145,6 +139,25 @@ def request_parameters(request):
                          "Error: {}. Request content: "
                          "'{}'".format(e, content))
             raise
+
+
+class ConfusedUsers:
+    def __init__(self):
+        self.users = []
+
+    def add_user(self, sender_id, status):
+        self.users.append(dict({"sender_id": sender_id, "status": status}))
+
+    def get_user(self, sender_id):
+        return [user for user in self.users if user['sender_id'] == sender_id]
+
+    def remove_user(self, sender_id):
+        self.users = [user for user in self.users if user['sender_id'] != sender_id]
+
+    def update_status(self, sender_id, status, intent_name, data):
+        for user in self.users:
+            if user.get('sender_id') == sender_id:
+                user.update(dict({'sender_id': sender_id, 'status': status, 'intent': intent_name, 'message': data}))
 
 
 class FilterServer:
@@ -223,6 +236,7 @@ class FilterServer:
 
 if __name__ == "__main__":
     read_yaml()
+    users = ConfusedUsers()
     filter_object = FilterServer("models/dialogue/default/dialogue_model", RasaNLUInterpreter("models/nlu/default"
                                                                                               "/nlu_model"))
     logger.info("Started http server on port %s" % 8081)
