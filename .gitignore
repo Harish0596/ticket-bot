@@ -5,4 +5,4 @@ __pycache__
 tickets.json
 orders.json
 models/
-stories.md
+./stories.md
