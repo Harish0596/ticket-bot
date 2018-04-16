@@ -504,3 +504,44 @@
   - reset_slots
 
 
+## Generated Story -7289532588791271981
+* greetings.hello
+    - utter_greetings.hello
+* agent.extras{"searchType": "climate"}
+    - slot{"searchType": "climate"}
+    - utter_ask_location
+* agent.extras{"GPE": "madurai"}
+    - slot{"GPE": "madurai"}
+    - utter_weather_details
+    - reset_slots
+* greetings.hello
+    - utter_greetings.hello
+* agent.extras{"searchType": "climate", "GPE": "hyderabad"}
+    - slot{"searchType": "climate"}
+    - slot{"GPE": "hyderabad"}
+    - utter_weather_details
+    - reset_slots
+* greetings.how_are_you
+    - utter_greetings.how_are_you
+* agent.extras{"searchType": "meaning", "searchWord": "computer"}
+    - slot{"searchType": "meaning"}
+    - slot{"searchWord": "computer"}
+    - utter_word_meaning
+    - reset_slots
+* agent.extras{"searchType": "weather"}
+    - slot{"searchType": "weather"}
+    - utter_ask_location
+* agent.extras{"GPE": "mumbai"}
+    - slot{"GPE": "mumbai"}
+    - utter_weather_details
+    - reset_slots
+* confirmation.yes
+    - utter_confirmation.yes
+* agent.can_you_help{"searchWord": "anything"}
+    - slot{"searchWord": "anything"}
+    - utter_agent.can_you_help
+* agent.hobby
+    - utter_agent.hobby
+* greetings.bye
+    - utter_greetings.bye
+    - export

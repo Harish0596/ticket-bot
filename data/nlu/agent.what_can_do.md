@@ -1,0 +1,13 @@
+## intent:agent.what_can_do
+- what can you do?
+- what can do?
+- what you do?
+- what are you up to?
+- what is the thing that you can do for me?
+- what you can provide for me?
+- what can u do
+- what u do
+- what all you do
+- what all u do
+- what you do
+- what can you do for me?
