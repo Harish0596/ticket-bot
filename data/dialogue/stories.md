@@ -503,4 +503,108 @@
   - utter_word_meaning
   - reset_slots
 
+## Generated Story -1638392932506130365
+* greetings.hello
+    - utter_greetings.hello
+* agent.extras{"GPE": "chennai"}
+    - slot{"GPE": "chennai"}
+    - utter_specific
+* agent.extras{"searchType": "weather"}
+    - slot{"searchType": "weather"}
+    - utter_weather_details
+    - reset_slots
+* greetings.hello{"GPE": "hi"}
+    - slot{"GPE": "hi"}
+    - utter_greetings.hello
+* agent.extras{"searchType": "mean"}
+    - slot{"searchType": "mean"}
+    - utter_ask_word
+* user.going_to_bed{"searchWord": "towel"}
+    - slot{"searchWord": "towel"}
+    - utter_word_meaning
+    - reset_slots
+* agent.can_you_help
+    - utter_agent.can_you_help
+* agent.details{"idType": "ticket", "iD": "234"}
+    - slot{"idType": "ticket"}
+    - slot{"iD": "234"}
+    - utter_ticket_details
+    - reset_slots
+* appraisal.thank_you
+    - utter_appraisal.thank_you
+* agent.hobby
+    - utter_agent.hobby
+* user.loves_agent
+    - utter_user.loves_agent
+* agent.extras{"searchType": "meaning", "searchWord": "custom"}
+    - slot{"searchType": "meaning"}
+    - slot{"searchWord": "custom"}
+    - utter_word_meaning
+    - reset_slots
+* appraisal.good{"language": "nice"}
+    - slot{"language": "nice"}
+    - utter_appraisal.good
+* agent.extras{"searchType": "translate", "searchWord": "pen", "language": "tamil"}
+    - slot{"searchType": "translate"}
+    - slot{"searchWord": "pen"}
+    - slot{"language": "tamil"}
+    - utter_translate_data
+    - reset_slots
+* appraisal.good{"language": "super"}
+    - slot{"language": "super"}
+    - utter_appraisal.good
+* greetings.bye
+    - utter_greetings.bye
+    - export
 
+## Generated Story 5047110476300776670
+* agent.there
+    - utter_agent.there
+* agent.details{"idType": "order", "iD": "14"}
+    - slot{"idType": "order"}
+    - slot{"iD": "14"}
+    - utter_order_details
+    - reset_slots
+* appraisal.thank_you
+    - utter_appraisal.thank_you
+* agent.residence
+    - utter_agent.residence
+* dialog.what_do_you_mean
+    - utter_dialog.what_do_you_mean
+* agent.details{"iD": "123"}
+    - slot{"iD": "123"}
+    - utter_ask_idType
+* agent.details{"idType": "order"}
+    - slot{"idType": "order"}
+    - utter_order_details
+    - reset_slots
+* agent.extras{"searchWord": "aperture", "searchType": "mean"}
+    - slot{"searchWord": "aperture"}
+    - slot{"searchType": "mean"}
+    - utter_word_meaning
+    - reset_slots
+* user.sleepy
+    - utter_user.sleepy
+* agent.fired
+    - utter_agent.fired
+* agent.my_friend
+    - utter_agent.my_friend
+* agent.extras
+    - utter_ask_again
+* agent.extras{"searchWord": "rat", "searchType": "meaning"}
+    - slot{"searchWord": "rat"}
+    - slot{"searchType": "meaning"}
+    - utter_word_meaning
+    - reset_slots
+* 
+    - utter_ask_again
+* agent.details{"idType": "customer"}
+    - slot{"idType": "customer"}
+    - utter_ask_Id
+* agent.details{"iD": "351"}
+    - slot{"iD": "351"}
+    - utter_customer_details
+    - reset_slots
+* greetings.bye
+    - utter_greetings.bye
+    - export

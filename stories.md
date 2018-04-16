@@ -116675,3 +116675,31 @@
 * greetings.bye
     - utter_greetings.bye
     - export
+## Generated Story -7077067431805275423
+    - slot{"language": "super"}
+    - utter_appraisal.good
+* greetings.bye
+    - utter_greetings.bye
+    - export
+## Generated Story -7077067431805275423
+    - slot{"language": "super"}
+    - utter_appraisal.good
+* greetings.bye
+    - utter_greetings.bye
+    - export
+## Generated Story -7077067431805275423
+    - slot{"language": "super"}
+    - utter_appraisal.good
+* greetings.bye
+    - utter_greetings.bye
+    - export
+## Generated Story -7077067431805275423
+    - slot{"language": "super"}
+    - utter_appraisal.good
+* greetings.bye
+    - utter_greetings.bye
+    - export
+## Generated Story 4884853592565175723
+* greetings.bye
+    - utter_greetings.bye
+    - export
