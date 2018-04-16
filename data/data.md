@@ -1,4 +1,4 @@
-## intent:details
+## intent:agent.details
 - can you help me finding details for id [621](iD)
 - i want to know about [order](idType) for [973](iD)
 - [customer](idType) information
@@ -62,7 +62,9 @@
 - Give me the [customer](idType) details of [832](iD)
 - that is about a [ticket](idType)
 
-## intent:addons
+## intent:agent.extras
+- [malayalam](language)
+- [hyderabad](GPE)
 - [meaning](searchType)
 - [means](searchType)
 - [translate](searchType)

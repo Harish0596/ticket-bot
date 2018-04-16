@@ -3,31 +3,10 @@ from __future__ import division
 from __future__ import unicode_literals
 
 from rasa_core.actions.action import Action
-from rasa_core.events import SlotSet
 from rasa_core.events import AllSlotsReset
 
 from soup import searchWeatherDetails, searchWordMeaning, translateGoogle
 from details import getTicketStatus, getCustomerDetails, getOrderDetails
-# import time
-#
-# st = 0
-#
-#
-# class startTime(Action):
-#     def name(self):
-#         return 'start_time'
-#
-#     def run(self, dispatcher, tracker, domain):
-#         global st
-#         st = int(time.time())
-
-
-class checkTime(Action):
-    def name(self):
-        return 'check_time'
-
-    def run(self, dispatcher, tracker, domain):
-        return [AllSlotsReset()]
 
 
 class GetCustomerDetails(Action):
@@ -35,14 +14,13 @@ class GetCustomerDetails(Action):
         return 'utter_customer_details'
 
     def run(self, dispatcher, tracker, domain):
-        tracker.latest_message()
         customerId = str(tracker.get_slot('iD'))
         message = getCustomerDetails(customerId)
         if message == "None":
             dispatcher.utter_message("Customer not found")
         else:
             dispatcher.utter_message(message)
-        return [SlotSet('iD', None), SlotSet('idType', None)]
+        return [AllSlotsReset()]
 
 
 class GetTicketDetails(Action):
@@ -56,7 +34,7 @@ class GetTicketDetails(Action):
             dispatcher.utter_message("No ticket exists with that id")
         else:
             dispatcher.utter_message(message)
-        return [SlotSet('iD', None), SlotSet('idType', None)]
+        return [AllSlotsReset()]
 
 
 class GetOrderDetails(Action):
@@ -70,7 +48,7 @@ class GetOrderDetails(Action):
             dispatcher.utter_message("Order id does not exist")
         else:
             dispatcher.utter_message(message)
-        return [SlotSet('iD', None), SlotSet('idType', None)]
+        return [AllSlotsReset()]
 
 
 class GetWeatherDetails(Action):
@@ -81,7 +59,7 @@ class GetWeatherDetails(Action):
         location = str(tracker.get_slot('GPE'))
         message = searchWeatherDetails(location)
         dispatcher.utter_message(message)
-        return [SlotSet('GPE', None), SlotSet('searchType', None)]
+        return [AllSlotsReset()]
 
 
 class GetWordMeaning(Action):
@@ -92,7 +70,7 @@ class GetWordMeaning(Action):
         word = str(tracker.get_slot('searchWord'))
         message = searchWordMeaning(word)
         dispatcher.utter_message(message)
-        return [SlotSet('searchWord', None), SlotSet('searchType', None)]
+        return [AllSlotsReset()]
 
 
 class GetTranslation(Action):
@@ -104,7 +82,7 @@ class GetTranslation(Action):
         language = str(tracker.get_slot('language'))
         message = translateGoogle(word, language)
         dispatcher.utter_message(message)
-        return [SlotSet('searchWord', None), SlotSet('searchType', None)]
+        return [AllSlotsReset()]
 
 
 class ActionFallback(Action):
@@ -116,4 +94,3 @@ class ActionFallback(Action):
 
         dispatcher.utter_message("Sorry, didn't get that. Try again.")
         return [UserUtteranceReverted()]
-
