@@ -34,7 +34,6 @@ entities:
 
 intents:
   - agent.acquaintance
-  - agent.what_can_do
   - agent.age
   - agent.annoying
   - agent.answer_my_question
@@ -68,6 +67,7 @@ intents:
   - agent.sure
   - agent.talk_to_me
   - agent.there
+  - agent.what_can_do
   - appraisal.bad
   - appraisal.good
   - appraisal.no_problem

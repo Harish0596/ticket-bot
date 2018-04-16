@@ -1,6 +1,6 @@
 ## intent:agent.age
 - tell me your age
-- what's your age
+- what's your age?
 - your age
 - age of yours
 - how old are you
@@ -11,6 +11,5 @@
 - tell me how old you are
 - how can i know about your age
 - i wanna know your age
-- how long have you been alive?
-
+- how long have you been live?
 - what is your age as of today?
