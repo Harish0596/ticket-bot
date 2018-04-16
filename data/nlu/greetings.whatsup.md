@@ -30,3 +30,8 @@
 - What you upto?
 - then?
 - then?
+- wassup yo
+- wassup yo
+- wassup yo
+- sup yo
+- sup yo

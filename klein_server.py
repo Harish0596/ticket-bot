@@ -10,7 +10,7 @@ from klein import Klein
 logger = logging.getLogger(__name__)
 
 checkFirstRequest = 0
-
+logging.basicConfig(filename='klein_server_log.log',level = logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
 def read_yaml():
     global templates
@@ -98,9 +98,11 @@ def low_confidence_filter(query, sender_id, parsed_data, respond_data):
 
         if intent_name == "confirmation.yes" and status == 1:
             add_data(users.get_user(sender_id)[0].get('intent'), users.get_user(sender_id)[0].get('message'))
+            logging.info('Reinforced user responses YES-LOG: User added Intent - "{}" : User added Message "{}" '.format(users.get_user(sender_id)[0].get('intent'), users.get_user(sender_id)[0].get('message').get('text')))
             users.remove_user(sender_id)
             return ["I will keep that in mind. Thank you for your response"]
         elif intent_name == "confirmation.no" and status == 1:
+            logging.info('Reinforced user responses NO-LOG: Bot suggested Intent - "{}" : For User Message "{}" '.format(users.get_user(sender_id)[0].get('intent'), users.get_user(sender_id)[0].get('message').get('text')))
             users.remove_user(sender_id)
             return ["I will let my developers know about it, thank you for your response"]
         else:
@@ -239,5 +241,4 @@ if __name__ == "__main__":
     users = ConfusedUsers()
     filter_object = FilterServer("models/dialogue/default/dialogue_model", RasaNLUInterpreter("models/nlu/default"
                                                                                               "/nlu_model"))
-    logger.info("Started http server on port %s" % 8081)
     filter_object.app.run("0.0.0.0", 8081)

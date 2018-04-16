@@ -42,6 +42,7 @@ function closechat() {
 
 function start(msg) {
     createSender(msg);
+    document.getElementById('typing').style.display = "inline";
     respond(msg);
 }
 
