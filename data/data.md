@@ -126,7 +126,7 @@
 - how about the [weather](searchType)
 - location is [new delhi](GPE)
 - location is [pune](GPE)
-- word is [imagination](serachWord)
+- word is [imagination](searchWord)
 - get me the [meaning](searchType) of the word [life](searchWord)
 - give me the [meaning](searchType) of [mouse](searchWord)
 - [meaning](searchType) for [computer](searchWord)
