@@ -1,0 +1,84 @@
+Encountered an exception while running action 'utter_translate_data'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPSConnectionPool(host='www.google.co.in', port=443): Max retries exceeded with url: /search?q=translate+dog+in+tamil&ie=UTF-8 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 407 Proxy Authentication Required',)))
+Traceback (most recent call last):
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connection.py", line 294, in connect
+    self._tunnel()
+  File "D:\Softwares\anaconda\lib\http\client.py", line 919, in _tunnel
+    message.strip()))
+OSError: Tunnel connection failed: 407 Proxy Authentication Required
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Softwares\anaconda\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.google.co.in', port=443): Max retries exceeded with url: /search?q=translate+dog+in+tamil&ie=UTF-8 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 407 Proxy Authentication Required',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Softwares\anaconda\lib\site-packages\rasa_core\processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "D:\Projects\ticket-bot\actions.py", line 92, in run
+    message = translateGoogle(word, language)
+  File "D:\Projects\ticket-bot\soup.py", line 42, in translateGoogle
+    r = s.get('https://www.google.co.in/search?q=translate+{}+in+{}&ie=UTF-8'.format(word, language))
+  File "D:\Softwares\anaconda\lib\site-packages\requests\sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "D:\Softwares\anaconda\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Softwares\anaconda\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Softwares\anaconda\lib\site-packages\requests\adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='www.google.co.in', port=443): Max retries exceeded with url: /search?q=translate+dog+in+tamil&ie=UTF-8 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 407 Proxy Authentication Required',)))
+Encountered an exception while running action 'utter_translate_data'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPSConnectionPool(host='www.google.co.in', port=443): Max retries exceeded with url: /search?q=translate+dog+in+tamil&ie=UTF-8 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 407 Proxy Authentication Required',)))
+Traceback (most recent call last):
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connection.py", line 294, in connect
+    self._tunnel()
+  File "D:\Softwares\anaconda\lib\http\client.py", line 919, in _tunnel
+    message.strip()))
+OSError: Tunnel connection failed: 407 Proxy Authentication Required
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Softwares\anaconda\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "D:\Softwares\anaconda\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.google.co.in', port=443): Max retries exceeded with url: /search?q=translate+dog+in+tamil&ie=UTF-8 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 407 Proxy Authentication Required',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Softwares\anaconda\lib\site-packages\rasa_core\processor.py", line 302, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "D:\Projects\ticket-bot\actions.py", line 92, in run
+    message = translateGoogle(word, language)
+  File "D:\Projects\ticket-bot\soup.py", line 42, in translateGoogle
+    r = s.get('https://www.google.co.in/search?q=translate+{}+in+{}&ie=UTF-8'.format(word, language))
+  File "D:\Softwares\anaconda\lib\site-packages\requests\sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "D:\Softwares\anaconda\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Softwares\anaconda\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Softwares\anaconda\lib\site-packages\requests\adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='www.google.co.in', port=443): Max retries exceeded with url: /search?q=translate+dog+in+tamil&ie=UTF-8 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 407 Proxy Authentication Required',)))

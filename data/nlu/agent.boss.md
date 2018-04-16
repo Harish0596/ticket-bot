@@ -14,3 +14,4 @@
 - who is your trainer
 - who trained you?
 - who is the one who owns you?
+- who is you

@@ -7,28 +7,32 @@ slots:
       - ticket
       - customer
       - order
-  word:
+  searchWord:
     type: text
+  searchType:
+    type: categorical
+    values:
+      - weather
+      - climate
+      - temperature
+      - mean
+      - means
+      - meaning
+      - translate
+      - translation
   language:
     type: text
-  location:
-    type: text
-  query:
+  GPE:
     type: text
 
 entities:
   - iD
   - idType
   - language
-  - location
-  - word
-  - query
+  - searchWord
+  - searchType
 
 intents:
-  - details
-  - weather_details
-  - word_meaning
-  - translate_data
   - agent.acquaintance
   - agent.age
   - agent.annoying
@@ -44,6 +48,8 @@ intents:
   - agent.chatbot
   - agent.clever
   - agent.crazy
+  - agent.details
+  - agent.extras
   - agent.fired
   - agent.funny
   - agent.good
@@ -117,36 +123,37 @@ intents:
   - confirmation.no
 
 templates:
-    utter_ask_idType:
-        - 'Is it Ticket ID, Customer ID or Order ID?'
-        - 'Please be more specific with ID (Ticket or Customer or Order)?'
+    utter_ask_again:
+        - 'Sorry can you enter in a way I can understand'
 
-    utter_ask_ticketId:
-        - 'Ticket ID please?'
-        - 'Would you mind telling me the Ticket ID?'
-        - 'Providing Ticket ID will make my job easy'
-        - 'Please provide the Ticket ID'
-        - 'Enter the ID of the Ticket'
-        - 'Sure, please tell me the Ticket ID'
-        - 'What is the Ticket ID?'
-    
-    utter_ask_orderId:
-        - 'Order ID please'
-        - 'Would you mind telling me the Order ID?'
-        - 'Providing Order ID will make my job easy'
-        - 'Please provide the Order ID'
-        - 'Enter the ID of the Order'
-        - 'Sure, please tell me the Order ID'
-        - 'What is the Order ID?'
-   
-    utter_ask_customerId:
-        - 'Customer ID please'
-        - 'Would you mind telling me the Customer ID?'
-        - 'Providing Customer ID will make my job easy'
-        - 'Please provide the Customer ID'
-        - 'Enter the ID of the Customer'
-        - 'Sure please tell me the Customer ID'
-        - 'What is the Customer ID?'
+    utter_ask_idType:
+        - 'Is it Ticket ID or Customer ID or Order ID?'
+        - 'Please be more specific with ID(Ticket or Customer or Order)'
+
+    utter_ask_Id:
+        - 'ID please'
+        - 'Would you mind telling the ID'
+        - 'Providing the ID will make my job easy'
+        - 'Please provide the ID'
+        - 'Enter the ID'
+        - 'Sure please tell the ID'
+        - 'What is the ID?'
+
+    utter_specific:
+        - 'Can you please be more specific?'
+
+    utter_ask_location:
+        - 'Please tell the location'
+        - 'Location please'
+        - 'In which location?'
+
+    utter_ask_language:
+        - 'Into which language'
+        - 'To language?'
+
+    utter_ask_word:
+        - 'Word please'
+        - 'Word?'
 
     utter_agent.acquaintance:
         - "I'm a virtual agent"
@@ -594,16 +601,20 @@ templates:
         - "Okay then."
 
 actions:
+  - actions.ActionFallback
   - actions.GetTicketDetails
   - actions.GetCustomerDetails
   - actions.GetOrderDetails
   - actions.GetTranslation
   - actions.GetWeatherDetails
   - actions.GetWordMeaning
+  - utter_ask_again
   - utter_ask_idType
-  - utter_ask_customerId
-  - utter_ask_ticketId
-  - utter_ask_orderId
+  - utter_ask_Id
+  - utter_specific
+  - utter_ask_location
+  - utter_ask_language
+  - utter_ask_word
   - utter_agent.acquaintance
   - utter_agent.age
   - utter_agent.annoying

@@ -23,3 +23,4 @@
 - What do you think about yourself?
 - what is your name
 - do you know how to read japanese?
+- you

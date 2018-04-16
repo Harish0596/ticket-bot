@@ -27,3 +27,11 @@
 - buddy sup
 - What are you doing
 - what is up with you these days?
+- What you upto?
+- then?
+- then?
+- wassup yo
+- wassup yo
+- wassup yo
+- sup yo
+- sup yo

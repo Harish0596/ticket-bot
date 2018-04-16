@@ -42,3 +42,5 @@
 - how are you?
 - so then
 - how are you/
+- hru?
+- okay what is the matter with you why do you act so dumb
