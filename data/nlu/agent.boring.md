@@ -9,7 +9,7 @@
 - i find you very boring man
 - you're really boring me
 - i'm bored of you
-- you are not interseting
+- you are not interesting
 - i find you boring
 - you're boring everyone
 - I'm extremely bored because of you

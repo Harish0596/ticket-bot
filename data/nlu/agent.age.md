@@ -5,7 +5,6 @@
 - age of yours
 - how old are you
 - I'd like to know your age
-- are you 21 years old
 - how old is your platform
 - how old are you?
 - tell me how old you are
