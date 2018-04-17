@@ -201,7 +201,11 @@
 ## story 51
 * greetings.hello
   - utter_greetings.hello
+<<<<<<< HEAD
 
+=======
+  - reset_slots
+>>>>>>> 5e728110ac6cf5b8d9d5f07d2ec9ec3b9fdde2d1
 ## story 52
 * greetings.how_are_you
   - utter_greetings.how_are_you
@@ -506,6 +510,7 @@
 ## Generated Story -1638392932506130365
 * greetings.hello
     - utter_greetings.hello
+    - reset_slots
 * agent.extras{"GPE": "chennai"}
     - slot{"GPE": "chennai"}
     - utter_specific
@@ -560,6 +565,7 @@
 ## Generated Story -7289532588791271981
 * greetings.hello
     - utter_greetings.hello
+    - reset_slots
 * agent.extras{"searchType": "climate"}
     - slot{"searchType": "climate"}
     - utter_ask_location
@@ -650,3 +656,76 @@
 * greetings.bye
     - utter_greetings.bye
     - export
+    
+## Story hi-sup-bye
+* greetings.hello
+    - utter_greetings.hello
+    - reset_slots
+* greetings.whatsup
+  - utter_greetings.whatsup
+* greetings.bye
+    - utter_greetings.bye
+* greetings.bye
+    - utter_greetings.bye
+    
+## Story S01
+* greetings.hello
+    - utter_greetings.hello
+    - reset_slots
+* greetings.whatsup
+  - utter_greetings.whatsup
+* agent.details{"idType": "order", "iD": "14181512"}
+    - slot{"idType": "order"}
+    - slot{"iD": "14181512"}
+    - utter_order_details
+    - reset_slots
+* agent.extras{"searchWord": "furious", "searchType": "meaning"}
+    - slot{"searchWord": "furious"}
+    - slot{"searchType": "meaning"}
+    - utter_word_meaning
+    - reset_slots
+* 
+    - utter_ask_again
+* agent.details{"idType": "customer"}
+    - slot{"idType": "customer"}
+    - utter_ask_Id
+* greetings.hello
+    - utter_greetings.hello
+* appraisal.thank_you
+    - utter_appraisal.thank_you
+* agent.residence
+    - utter_agent.residence
+* agent.details{"idType": "customer"}
+    - slot{"idType": "customer"}
+    - utter_ask_Id
+* agent.details{"iD": "3511413"}
+    - slot{"iD": "3511413"}
+    - utter_customer_details
+    - reset_slots
+* greetings.bye
+    - utter_greetings.bye
+* greetings.bye
+    - utter_greetings.bye
+
+## Story S02
+* greetings.hello
+    - utter_greetings.hello
+    - reset_slots
+* greetings.whatsup
+  - utter_greetings.whatsup
+* agent.details{"idType": "customer"}
+    - slot{"idType": "customer"}
+    - utter_ask_Id
+* user.sleepy
+    - utter_user.sleepy
+* agent.fired
+    - utter_agent.fired
+* agent.details{"iD": "351"}
+    - slot{"iD": "351"}
+    - utter_customer_details
+    - reset_slots
+* greetings.bye
+    - utter_greetings.bye
+* greetings.bye
+    - utter_greetings.bye
+
