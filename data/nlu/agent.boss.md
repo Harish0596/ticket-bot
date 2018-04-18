@@ -13,3 +13,9 @@
 - who is your trainer
 - who trained you?
 - who is the one who owns you?
+- Are you the boss?
+- Who is the boss, here?
+- Do you know your boss?
+- What do you think of your boss?
+- u r made by?
+- Who is the boss of this company?

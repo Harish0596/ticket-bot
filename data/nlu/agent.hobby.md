@@ -1,6 +1,5 @@
 ## intent:agent.hobby
 - what do you do for fun?
-- what's your hobby
 - tell me about your hobby
 - do you have a hobby
 - what about your hobby
@@ -13,3 +12,10 @@
 - what do you do when you have nothing to do
 - how do you spend your time?
 - What do you do when you are free?
+- What's your hobby?
+- Do you have many hobbies?
+- Do you have a hobby?
+- Please tell me about your hobbies
+- The important thing is to have your own hobby
+- u ought not to have spent so much money on your hobby
+- What will you do when you are alone?

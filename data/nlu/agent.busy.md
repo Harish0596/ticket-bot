@@ -7,7 +7,6 @@
 - are you so busy?
 - are you working?
 - how busy you are?
-- are you still working on it?
 - you're very busy
 - are you working now?
 - are you working today?
@@ -17,3 +16,6 @@
 - you seem to be busy
 - you seem to be very busy
 - you're a busy person
+- u look busy
+- You'll be busy
+- Aren't you busy?

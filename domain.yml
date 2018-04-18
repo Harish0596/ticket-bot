@@ -74,6 +74,9 @@ intents:
   - appraisal.thank_you
   - appraisal.welcome
   - appraisal.well_done
+  - confirmation.yes
+  - confirmation.cancel
+  - confirmation.no
   - dialog.hold_on
   - dialog.hug
   - dialog.i_do_not_care
@@ -119,43 +122,8 @@ intents:
   - user.wants_to_see_agent_again
   - user.wants_to_talk
   - user.will_be_back
-  - confirmation.yes
-  - confirmation.cancel
-  - confirmation.no
 
 templates:
-    utter_ask_again:
-        - 'Sorry can you enter in a way I can understand'
-
-    utter_ask_idType:
-        - 'Is it Ticket ID or Customer ID or Order ID?'
-        - 'Please be more specific with ID(Ticket or Customer or Order)'
-
-    utter_ask_Id:
-        - 'ID please'
-        - 'Would you mind telling the ID'
-        - 'Providing the ID will make my job easy'
-        - 'Please provide the ID'
-        - 'Enter the ID'
-        - 'Sure please tell the ID'
-        - 'What is the ID?'
-
-    utter_specific:
-        - 'Can you please be more specific?'
-
-    utter_ask_location:
-        - 'Please tell the location'
-        - 'Location please'
-        - 'In which location?'
-
-    utter_ask_language:
-        - 'Into which language'
-        - 'To language?'
-
-    utter_ask_word:
-        - 'Word please'
-        - 'Word?'
-
     utter_agent.acquaintance:
         - "I'm a virtual agent"
         - "Think of me as a virtual agent."
@@ -338,7 +306,36 @@ templates:
     utter_appraisal.well_done:
         - "My pleasure."
         - "Glad I could help."
-        
+
+    utter_ask_again:
+        - 'Sorry can you enter in a way I can understand'
+
+    utter_ask_Id:
+        - 'ID please'
+        - 'Would you mind telling the ID'
+        - 'Providing the ID will make my job easy'
+        - 'Please provide the ID'
+        - 'Enter the ID'
+        - 'Sure please tell the ID'
+        - 'What is the ID?'
+
+    utter_ask_idType:
+        - 'Is it Ticket ID or Customer ID or Order ID?'
+        - 'Please be more specific with ID(Ticket or Customer or Order)'
+
+    utter_ask_language:
+        - 'Into which language'
+        - 'To language?'
+
+    utter_ask_location:
+        - 'Please tell the location'
+        - 'Location please'
+        - 'In which location?'
+
+    utter_ask_word:
+        - 'Word please'
+        - 'Word?'
+
     utter_dialog.hold_on:
         - "I can wait."
         - "I'll be waiting."
@@ -396,6 +393,8 @@ templates:
         - "Good morning! How are you today?"
 
     utter_greetings.goodnight:
+        - "Good night"
+        - "Good night, don't let the bed bugs bite"
         - "Sleep tight!"
         - "Have a good one!"
         - "Talk to you soon!"
@@ -424,7 +423,7 @@ templates:
     utter_greetings.nice_to_see_you:
         - "Likewise!"
         - "So glad we meet again!"
-        - "Same here. I was starting to miss you."
+        - "Same here. I was starting to miss you :("
 
     utter_greetings.nice_to_talk_to_you:
         - "It sure was. We can chat again anytime."
@@ -515,6 +514,7 @@ templates:
         - "That's great to hear."
         
     utter_user.lonely:
+        - "You are no longer alone :)"
         - "I'm sorry. I'm always available if you need someone to talk to."
         - "Sometimes that happens. We can chat a bit if that will help you."
         
@@ -525,7 +525,7 @@ templates:
         - "You look like you're ready to take on the world."
         
     utter_user.loves_agent:
-        - "I love you, too."
+        - "Awwww I love you."
         - "Thanks! The feeling is mutual."
         - "Likewise!"
         - "That's great to hear."
@@ -584,7 +584,11 @@ templates:
         - "Okay. You know where to find me."
         - "All right. I'll be here."
 
+    utter_specific:
+        - 'Can you please be more specific?'
+
     utter_confirmation.yes:
+        - "Cool"
         - "Great!"
         - "All right!"
         - "Good!"
@@ -603,19 +607,12 @@ templates:
 
 actions:
   - actions.ActionFallback
-  - actions.GetTicketDetails
   - actions.GetCustomerDetails
   - actions.GetOrderDetails
   - actions.GetTranslation
+  - actions.GetTicketDetails
   - actions.GetWeatherDetails
   - actions.GetWordMeaning
-  - utter_ask_again
-  - utter_ask_idType
-  - utter_ask_Id
-  - utter_specific
-  - utter_ask_location
-  - utter_ask_language
-  - utter_ask_word
   - utter_agent.acquaintance
   - utter_agent.age
   - utter_agent.annoying
@@ -654,6 +651,13 @@ actions:
   - utter_appraisal.thank_you
   - utter_appraisal.welcome
   - utter_appraisal.well_done
+  - utter_ask_again
+  - utter_ask_Id
+  - utter_ask_idType
+  - utter_ask_language
+  - utter_ask_location
+  - utter_ask_word
+  - utter_specific
   - utter_dialog.hold_on
   - utter_dialog.hug
   - utter_dialog.i_do_not_care

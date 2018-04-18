@@ -113,3 +113,8 @@
 - [telugu](language)
 - [malayalam](language)
 - [japanese](language)
+- [rat](searchWord)
+- [elephant](searchWord)
+- [rose](serachWord)
+- [food](searchWord)
+- [sunflower](searchWord)

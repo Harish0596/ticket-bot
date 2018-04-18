@@ -503,6 +503,16 @@
   - utter_word_meaning
   - reset_slots
 
+## story translate format 04
+* agent.extras{"searchType":"translation", "searchWord":"who"}
+    - slot{"searchType":"translation"}
+    - slot{"searchWord":"who"}
+    - utter_ask_language
+* agent.extras{"language":"Malayalam"}
+    - slot{"language":"Malayalam"}
+    - utter_translate_data
+    - reset_slots
+ 
 ## Generated Story -1638392932506130365
 * greetings.hello
     - utter_greetings.hello

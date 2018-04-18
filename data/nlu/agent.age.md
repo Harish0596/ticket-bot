@@ -3,9 +3,8 @@
 - what's your age?
 - your age
 - age of yours
-- how old are you
+- how old were you
 - I'd like to know your age
-- are you 21 years old
 - how old is your platform
 - how old are you?
 - tell me how old you are
@@ -13,3 +12,10 @@
 - i wanna know your age
 - how long have you been live?
 - what is your age as of today?
+- How old did you turn?
+- How old are you now?
+- what is your age?
+- How old will you be turning?
+- how old r u?
+- From how long you have been here?
+- You look aged

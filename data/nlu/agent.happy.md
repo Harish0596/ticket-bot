@@ -1,5 +1,5 @@
 ## intent:agent.happy
-- are you happy
+- are you happy?
 - you are happy
 - you're very happy
 - you're really happy
@@ -13,3 +13,9 @@
 - i think you are happy
 - you seem to be happy
 - i feel i made you happy
+- I wonder if you are truly happy
+- You don't look very happy today
+- You seem happy
+- Were you happy?
+- u seemed to have been very happy
+- You look very happy this morning?

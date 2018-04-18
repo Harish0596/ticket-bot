@@ -7,8 +7,8 @@ def train_nlu(data, config, model_dir):
     training_data = load_data(data)
     trainer = Trainer(RasaNLUConfig(config))
     trainer.train(training_data)
-    trainer.persist(model_dir, fixed_model_name='nlu_model')
+    model_directory = trainer.persist(model_dir, fixed_model_name='nlu_model')
 
 
 if __name__ == '__main__':
-    train_nlu('./data/nlu', 'config.json', './models/nlu')
+    train_nlu('./data/nlu', './config.json', './models/nlu')
