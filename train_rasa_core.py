@@ -23,7 +23,6 @@ def train_core(input_channel, interpreter, domain_file="domain.yml", training_da
                        batch_size=50,
                        validation_split=0.2,
                        epochs=150)
-
     return agent
 
 

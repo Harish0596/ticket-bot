@@ -278,6 +278,9 @@ templates:
         - "Of course. I'm always here."
         - "Right where you left me."
         
+    utter_agent.what_can_do:
+        - "I can find ticket, order and customer details along with other things such as meaning for a word and translation of a word and even weather details."
+        
     utter_appraisal.bad:
         - "I'm sorry. Please let me know if I can help in some way."
         - "I must be missing some knowledge. I'll have my developer look into this."
@@ -645,6 +648,7 @@ actions:
   - utter_agent.sure
   - utter_agent.talk_to_me
   - utter_agent.there
+  - utter_agent.what_can_do
   - utter_appraisal.bad
   - utter_appraisal.good
   - utter_appraisal.no_problem
