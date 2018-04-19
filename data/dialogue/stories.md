@@ -201,7 +201,6 @@
 ## story 51
 * greetings.hello
     - utter_greetings.hello
-    - reset_slots
   
 ## story 52
 * greetings.how_are_you
@@ -517,7 +516,6 @@
 ## Generated Story -1638392932506130365
 * greetings.hello
     - utter_greetings.hello
-    - reset_slots
 * agent.extras{"GPE": "chennai"}
     - slot{"GPE": "chennai"}
     - utter_specific
@@ -525,8 +523,7 @@
     - slot{"searchType": "weather"}
     - utter_weather_details
     - reset_slots
-* greetings.hello{"GPE": "hi"}
-    - slot{"GPE": "hi"}
+* greetings.hello
     - utter_greetings.hello
 * agent.extras{"searchType": "mean"}
     - slot{"searchType": "mean"}
@@ -572,7 +569,6 @@
 ## Generated Story -7289532588791271981
 * greetings.hello
     - utter_greetings.hello
-    - reset_slots
 * agent.extras{"searchType": "climate"}
     - slot{"searchType": "climate"}
     - utter_ask_location
@@ -678,7 +674,6 @@
 ## Story S01
 * greetings.hello
     - utter_greetings.hello
-    - reset_slots
 * greetings.whatsup
   - utter_greetings.whatsup
 * agent.details{"idType": "order", "iD": "14181512"}
@@ -717,7 +712,6 @@
 ## Story S02
 * greetings.hello
     - utter_greetings.hello
-    - reset_slots
 * greetings.whatsup
   - utter_greetings.whatsup
 * agent.details{"idType": "customer"}
@@ -735,3 +729,259 @@
     - utter_greetings.bye
 * greetings.bye
     - utter_greetings.bye
+    
+## Generated Story -7832277216165824325
+* greetings.hello
+    - utter_greetings.hello
+* agent.extras{"searchType": "meaning"}
+    - slot{"searchType": "meaning"}
+    - utter_ask_word
+* agent.boss{"searchWord": "organization"}
+    - slot{"searchWord": "organization"}
+    - reset_slots
+* agent.extras{"searchWord": "architecture"}
+    - slot{"searchWord": "architecture"}
+    - utter_specific
+* agent.extras{"searchType": "meaning"}
+    - slot{"searchType": "meaning"}
+    - utter_word_meaning
+    - reset_slots
+* agent.extras{"searchType": "weather"}
+    - slot{"searchType": "weather"}
+    - utter_ask_location
+* agent.extras{"GPE": "jaipur"}
+    - slot{"GPE": "jaipur"}
+    - utter_weather_details
+    - reset_slots
+* agent.extras{"searchType": "translate"}
+    - slot{"searchType": "translate"}
+    - utter_ask_word
+* agent.extras
+    - utter_ask_again
+* agent.extras{"searchWord": "pen"}
+    - slot{"searchWord": "pen"}
+    - utter_ask_language
+* agent.extras{"language": "tamil"}
+    - slot{"language": "tamil"}
+    - utter_translate_data
+    - reset_slots
+* agent.extras{"searchType": "meaning"}
+    - slot{"searchType": "meaning"}
+    - utter_ask_word
+* agent.extras{"searchWord": "encyclopedia"}
+    - slot{"searchWord": "encyclopedia"}
+    - utter_word_meaning
+    - reset_slots
+    - export
+    
+## Generated Story 8442984109250525068
+* greetings.hello
+    - utter_greetings.hello
+* agent.extras{"searchType": "weather"}
+    - slot{"searchType": "weather"}
+    - utter_weather_details
+    - reset_slots
+* agent.extras{"searchType": "meaning"}
+    - slot{"searchType": "meaning"}
+    - utter_ask_word
+* agent.boss{"searchWord": "organization"}
+    - slot{"searchWord": "organization"}
+    - reset_slots
+* agent.extras{"searchWord": "organization"}
+    - slot{"searchWord": "organization"}
+    - utter_specific
+* agent.extras{"searchType": "meaning"}
+    - slot{"searchType": "meaning"}
+    - utter_word_meaning
+    - reset_slots
+* agent.extras{"searchType": "weather"}
+    - slot{"searchType": "weather"}
+    - utter_ask_location
+* agent.extras{"GPE": "chennai"}
+    - slot{"GPE": "chennai"}
+    - utter_weather_details
+    - reset_slots
+* greetings.how_are_you
+    - utter_greetings.how_are_you
+* agent.what_can_do
+    - utter_agent.what_can_do
+* emotions.wow
+    - reset_slots
+    - export
+    
+## Generated Story 877397253234291006
+* greetings.hello
+    - utter_greetings.hello
+* greetings.how_are_you
+    - utter_greetings.how_are_you
+* greetings.how_are_you{"searchWord": "life"}
+    - slot{"searchWord": "life"}
+    - utter_greetings.how_are_you
+* agent.can_you_help
+    - utter_agent.can_you_help
+* agent.details{"idType": "ticket"}
+    - slot{"idType": "ticket"}
+    - utter_ask_Id
+* agent.details{"iD": "234"}
+    - slot{"iD": "234"}
+    - utter_ticket_details
+    - reset_slots
+* agent.good
+    - utter_agent.good
+* agent.residence
+    - utter_agent.residence
+* appraisal.good{"language": "nice"}
+    - slot{"language": "nice"}
+    - utter_appraisal.good
+* agent.details{"idType": "customer", "iD": "351"}
+    - slot{"idType": "customer"}
+    - slot{"iD": "351"}
+    - utter_customer_details
+    - reset_slots
+* appraisal.good{"language": "super"}
+    - slot{"language": "super"}
+    - utter_appraisal.good
+* user.likes_agent
+    - utter_user.likes_agent
+* user.loves_agent
+    - utter_user.loves_agent
+* agent.extras{"searchType": "weather", "GPE": "kulumanali"}
+    - slot{"searchType": "weather"}
+    - slot{"GPE": "kulumanali"}
+    - utter_weather_details
+    - reset_slots
+* agent.good
+    - utter_agent.good
+* greetings.nice_to_meet_you{"searchWord": "meeting"}
+    - slot{"searchWord": "meeting"}
+    - reset_slots
+* greetings.nice_to_meet_you
+    - utter_greetings.nice_to_meet_you
+* user.misses_agent
+    - utter_user.misses_agent
+* greetings.bye
+    - utter_greetings.bye
+    - export
+
+## Generated Story -6784787797284284116
+* greetings.hello
+    - utter_greetings.hello
+* agent.boring
+    - utter_agent.boring
+* agent.origin
+    - utter_agent.origin
+* greetings.whatsup
+    - utter_greetings.whatsup
+* user.looks_like
+    - utter_user.looks_like
+* user.tired
+    - utter_user.tired
+* user.sleepy
+    - utter_user.sleepy
+* agent.hobby
+    - utter_agent.hobby
+* agent.extras{"searchType": "meaning", "searchWord": "alluring"}
+    - slot{"searchType": "meaning"}
+    - slot{"searchWord": "alluring"}
+    - utter_word_meaning
+    - reset_slots
+* user.excited
+    - utter_user.excited
+* agent.be_clever
+    - utter_agent.be_clever
+* user.bored
+    - utter_user.bored
+* confirmation.no
+    - utter_confirmation.no
+* agent.extras{"searchType": "translate", "searchWord": "cat", "language": "hindi"}
+    - slot{"searchType": "translate"}
+    - slot{"searchWord": "cat"}
+    - slot{"language": "hindi"}
+    - utter_translate_data
+    - reset_slots
+* emotions.wow
+    - utter_emotions.wow
+* user.misses_agent
+    - utter_user.misses_agent
+* agent.details{"iD": "234"}
+    - slot{"iD": "234"}
+    - utter_ask_idType
+* agent.details{"idType": "ticket"}
+    - slot{"idType": "ticket"}
+    - utter_ticket_details
+    - reset_slots
+* confirmation.yes
+    - utter_confirmation.yes
+* greetings.bye
+    - utter_greetings.bye
+    - export
+
+## Generated Story 7145701913350434366
+* greetings.hello
+    - utter_greetings.hello
+* greetings.how_are_you
+    - utter_greetings.how_are_you
+* agent.what_can_do
+    - utter_agent.what_can_do
+* agent.details{"idType": "ticket"}
+    - slot{"idType": "ticket"}
+    - utter_ask_Id
+* agent.details{"iD": "234"}
+    - slot{"iD": "234"}
+    - utter_ticket_details
+    - reset_slots
+* agent.extras{"searchType": "meaning"}
+    - slot{"searchType": "meaning"}
+    - utter_ask_word
+* agent.extras{"searchWord": "architecture"}
+    - slot{"searchWord": "architecture"}
+    - utter_word_meaning
+    - reset_slots
+* confirmation.yes
+    - utter_confirmation.yes
+* agent.residence
+    - utter_agent.residence
+* appraisal.good{"language": "nice"}
+    - slot{"language": "nice"}
+    - utter_appraisal.good
+* agent.details{"idType": "customer", "iD": "153"}
+    - slot{"idType": "customer"}
+    - slot{"iD": "153"}
+    - utter_customer_details
+    - reset_slots
+* confirmation.yes
+    - utter_confirmation.yes
+* agent.extras{"searchType": "translate"}
+    - slot{"searchType": "translate"}
+    - utter_ask_word
+* agent.extras{"searchWord": "pen"}
+    - slot{"searchWord": "pen"}
+    - utter_ask_language
+* agent.extras{"language": "tamil"}
+    - slot{"language": "tamil"}
+    - utter_translate_data
+    - reset_slots
+* appraisal.good
+    - utter_confirmation.yes
+* agent.details{"iD": "14"}
+    - slot{"iD": "14"}
+    - utter_ask_idType
+* agent.details{"idType": "order"}
+    - slot{"idType": "order"}
+    - utter_order_details
+    - reset_slots
+* appraisal.good
+    - utter_appraisal.good
+* user.bored
+    - utter_user.bored
+* confirmation.no
+    - utter_confirmation.no
+* user.can_not_sleep
+    - utter_user.can_not_sleep
+* user.will_be_back
+    - utter_user.will_be_back
+* user.can_not_sleep
+    - utter_user.sleepy
+* greetings.bye
+    - utter_greetings.bye
+    - export
