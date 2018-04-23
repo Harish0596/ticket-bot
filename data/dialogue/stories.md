@@ -361,9 +361,9 @@
     - reset_slots
 
 ## story order format 01
-* agent.details{"idType": "order", "iD": "241"}
+* agent.details{"idType": "order", "iD": "43"}
     - slot{"idType": "order"}
-    - slot{"iD": "241"}
+    - slot{"iD": "43"}
     - utter_order_details
     - reset_slots
 
@@ -611,9 +611,9 @@
 ## Generated Story 5047110476300776670
 * agent.there
     - utter_agent.there
-* agent.details{"idType": "order", "iD": "14"}
+* agent.details{"idType": "order", "iD": "321"}
     - slot{"idType": "order"}
-    - slot{"iD": "14"}
+    - slot{"iD": "321"}
     - utter_order_details
     - reset_slots
 * appraisal.thank_you
@@ -676,9 +676,9 @@
     - utter_greetings.hello
 * greetings.whatsup
   - utter_greetings.whatsup
-* agent.details{"idType": "order", "iD": "14181512"}
+* agent.details{"idType": "order", "iD": "67"}
     - slot{"idType": "order"}
-    - slot{"iD": "14181512"}
+    - slot{"iD": "67"}
     - utter_order_details
     - reset_slots
 * agent.extras{"searchWord": "furious", "searchType": "meaning"}

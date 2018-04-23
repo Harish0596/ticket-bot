@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 
 from rasa_core.actions.action import Action
 from rasa_core.events import AllSlotsReset
-
 from soup import search_weather_details, search_word_meaning, translate_word, search_restaurants
 from details import get_ticket_status, get_customer_details, get_order_details
 
@@ -22,7 +21,7 @@ class GetCustomerDetails(Action):
                 dispatcher.utter_message("Customer not found")
             else:
                 dispatcher.utter_message(message)
-                return [AllSlotsReset()]
+            return [AllSlotsReset()]
         elif id_type == "None":
             tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_IdType"))
         elif customer_id == "None":
@@ -60,10 +59,9 @@ class GetTicketDetails(Action):
             message = get_ticket_status(ticket_id)
             if message == "None":
                 dispatcher.utter_message("No ticket exists with that ID")
-                return [AllSlotsReset()]
             else:
                 dispatcher.utter_message(message)
-                return [AllSlotsReset()]
+            return [AllSlotsReset()]
         elif id_type == "None":
             tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_IdType"))
         elif ticket_id == "None":
@@ -122,24 +120,6 @@ class GetWordMeaning(Action):
             tracker.trigger_follow_up_action(domain.action_for_name("utter_specific"))
         elif word == "None":
             tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_word"))
-
-
-# class ActionFallbackNLU(Action):
-#     def name(self):
-#         return "action_fallback_nlu"
-#
-#     def run(self, dispatcher, tracker, domain):
-#         dispatcher.utter_message("Sorry, nlu didn't get that. Try again.")
-#         tracker.trigger_follow_up_action(domain.action_for_name("action_listen"))
-#
-#
-# class ActionFallbackCORE(Action):
-#     def name(self):
-#         return "action_fallback_core"
-#
-#     def run(self, dispatcher, tracker, domain):
-#         dispatcher.utter_message("Sorry, core didn't get that. Try again.")
-#         tracker.trigger_follow_up_action(domain.action_for_name("action_listen"))
 
 
 class GetRestaurant(Action):

@@ -95,7 +95,4 @@
 - very nice
 - it's very good
 - that's fine
-- Okay cool
-- so
 - good for you
-- yeah am great

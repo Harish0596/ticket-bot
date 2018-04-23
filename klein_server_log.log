@@ -1,85 +1,38 @@
-2018-04-17 10:26:31,950:WARNING:Couldn't set most probable feature 'intent_Hello', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:26:31,950:WARNING:Couldn't set most probable feature 'intent_Hello', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:29:27,551:WARNING:Couldn't set most probable feature 'intent_Sup', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:29:27,566:WARNING:Couldn't set most probable feature 'intent_Sup', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:31:56,925:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 10:31:57,818:WARNING:Couldn't set most probable feature 'intent_Sup', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:31:57,818:WARNING:Couldn't set most probable feature 'intent_Sup', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:33:40,286:WARNING:Couldn't set most probable feature 'intent_hi', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:33:40,286:WARNING:Couldn't set most probable feature 'intent_hi', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:34:00,457:WARNING:Couldn't set most probable feature 'intent_weather in chennai', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:34:00,457:WARNING:Couldn't set most probable feature 'intent_weather in chennai', it wasn't found in the feature list of the domain. Make sure you added all intents and entities to the domain.
-2018-04-17 10:35:37,116:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 10:39:06,624:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 10:41:59,477:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 10:45:52,636:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 10:46:45,022:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "user.bored" : For User Message "yo man i is bored" 
-2018-04-17 10:48:13,563:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 11:02:03,481:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 11:09:49,692:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 11:31:31,966:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 11:41:54,945:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 12:09:42,887:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 14:20:42,136:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 14:44:57,441:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 14:57:03,128:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 14:57:39,139:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.extras" : For User Message "sup" 
-2018-04-17 15:00:51,263:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "confirmation.yes" : For User Message "whatsup" 
-2018-04-17 15:28:37,940:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 15:28:47,781:ERROR:Caught an exception during parse: 0
+2018-04-23 10:45:04,537:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-04-23 10:45:25,099:ERROR:Caught an exception during parse: list index out of range
 Traceback (most recent call last):
-  File "D:/Projects/ticket-bot/server.py", line 94, in respond
-    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
-  File "D:\Projects\ticket-bot\server_controller.py", line 108, in filter_agent_response
-    status = self.users.get_user(sender_id)[0].get('status')
-KeyError: 0
-2018-04-17 15:28:51,217:ERROR:Caught an exception during parse: 0
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range
+2018-04-23 10:45:44,598:ERROR:Caught an exception during parse: list index out of range
 Traceback (most recent call last):
-  File "D:/Projects/ticket-bot/server.py", line 94, in respond
-    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
-  File "D:\Projects\ticket-bot\server_controller.py", line 108, in filter_agent_response
-    status = self.users.get_user(sender_id)[0].get('status')
-KeyError: 0
-2018-04-17 15:28:53,435:ERROR:Caught an exception during parse: 0
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range
+2018-04-23 10:45:48,525:ERROR:Caught an exception during parse: list index out of range
 Traceback (most recent call last):
-  File "D:/Projects/ticket-bot/server.py", line 94, in respond
-    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
-  File "D:\Projects\ticket-bot\server_controller.py", line 108, in filter_agent_response
-    status = self.users.get_user(sender_id)[0].get('status')
-KeyError: 0
-2018-04-17 15:28:55,666:ERROR:Caught an exception during parse: 0
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range
+2018-04-23 10:46:23,547:ERROR:Caught an exception during parse: list index out of range
 Traceback (most recent call last):
-  File "D:/Projects/ticket-bot/server.py", line 94, in respond
-    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
-  File "D:\Projects\ticket-bot\server_controller.py", line 108, in filter_agent_response
-    status = self.users.get_user(sender_id)[0].get('status')
-KeyError: 0
-2018-04-17 15:29:04,988:ERROR:Caught an exception during parse: 0
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range
+2018-04-23 10:47:30,790:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-04-23 11:08:31,825:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-04-23 11:19:21,357:ERROR:Caught an exception during parse: list index out of range
 Traceback (most recent call last):
-  File "D:/Projects/ticket-bot/server.py", line 94, in respond
-    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
-  File "D:\Projects\ticket-bot\server_controller.py", line 108, in filter_agent_response
-    status = self.users.get_user(sender_id)[0].get('status')
-KeyError: 0
-2018-04-17 15:30:18,393:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 15:31:39,237:INFO:Reinforced user responses YES-LOG: User added Intent - "dialog.what_do_you_mean" : User added Message "how do i confuse you" 
-2018-04-17 15:32:45,728:INFO:Reinforced user responses YES-LOG: User added Intent - "dialog.what_do_you_mean" : User added Message "how do i confuse you" 
-2018-04-17 15:32:57,778:INFO:Reinforced user responses YES-LOG: User added Intent - "appraisal.bad" : User added Message "lame and confused" 
-2018-04-17 15:38:24,078:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 15:39:34,513:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "confirmation.no" : For User Message "why not" 
-2018-04-17 15:59:07,296:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 15:59:43,250:ERROR:Caught an exception during parse: unsupported operand type(s) for +: 'NoneType' and 'numpy.str_'
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range
+2018-04-23 11:19:31,865:ERROR:Caught an exception during parse: list index out of range
 Traceback (most recent call last):
-  File "D:/Projects/ticket-bot/server.py", line 93, in respond
-    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
-  File "D:\Projects\ticket-bot\server_controller.py", line 123, in filter_agent_response
-    self.users.get_user(sender_id).get('message'))
-  File "D:\Projects\ticket-bot\server_controller.py", line 33, in add_data
-    self.format_data((path + intent + ".md"), message)
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'numpy.str_'
-2018-04-17 16:01:01,842:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 16:01:19,292:INFO:Reinforced user responses YES-LOG: User added Intent - "agent.boring" : User added Message "what you so boring" 
-2018-04-17 16:08:19,905:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 16:12:14,170:INFO:Reinforced user responses YES-LOG: User added Intent - "agent.boring" : User added Message "what you so boring" 
-2018-04-17 16:16:00,388:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
-2018-04-17 16:16:48,775:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range
+2018-04-23 11:19:49,978:ERROR:Caught an exception during parse: list index out of range
+Traceback (most recent call last):
+  File "C:/Users/IT/Desktop/ticket-bot/server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+IndexError: list index out of range

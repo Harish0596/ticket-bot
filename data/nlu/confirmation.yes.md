@@ -20,3 +20,5 @@
 - okay buddy
 - oh okay
 - yeah sure
+- okay cool
+- coool

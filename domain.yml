@@ -609,7 +609,6 @@ templates:
         - "Okay then."
 
 actions:
-  - actions.ActionFallback
   - actions.GetCustomerDetails
   - actions.GetOrderDetails
   - actions.GetTranslation

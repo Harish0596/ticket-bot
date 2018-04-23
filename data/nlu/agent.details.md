@@ -1,4 +1,5 @@
 ## intent:agent.details
+- id is [35](iD)
 - can you help me finding details for id [621](iD)
 - i want to know about [order](idType) for [973](iD)
 - [customer](idType) information
@@ -26,7 +27,7 @@
 - what about my [ticket](idType)
 - [ticket](idType)
 - [ticket](idType) [462](iD) details
-- get [ticket](idType) [563](iD) information
+- get [ticket](idType) [53](iD) information
 - i want some info about [365](iD) [ticket](idType)
 - [order](idType) details
 - get the [order](idType) details for id [574](iD)
@@ -35,7 +36,7 @@
 - give the [order](idType) details
 - [order](idType) details pls
 - [832](iD)
-- give the details of the [order](idType) with id [483](iD)  
+- give the details of the [order](idType) with id [83](iD)  
 - i want to know my [order](idType) details
 - details of [order](idType) with id [905](iD)
 - get the details following [order](idType) with id [735](iD)
@@ -61,3 +62,4 @@
 - I want details for [customer](idType) id [645](iD)
 - Give me the [customer](idType) details of [832](iD)
 - that is about a [ticket](idType)
+- [12](iD)
