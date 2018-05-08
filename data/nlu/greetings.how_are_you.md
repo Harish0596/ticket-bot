@@ -38,3 +38,5 @@
 - how's your day
 - how are you doing this morning
 - how do you do?
+- how are you
+- how are you

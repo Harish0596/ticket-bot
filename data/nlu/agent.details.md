@@ -3,6 +3,9 @@
 - can you help me finding details for id [621](iD)
 - i want to know about [order](idType) for [973](iD)
 - [customer](idType) information
+- i want to know about [customer](idType) for [765](iD)
+- [customer](idType) [351](iD)
+- get me [customer](idType) details 
 - information of [order](idType)
 - info regarding [ticket](idType)
 - give the details of [ticket](idType) with id [738](iD)
@@ -13,6 +16,10 @@
 - give the [ticket](idType) details
 - [ticket](idType) details pls
 - [327](iD)
+- what about [customer](idType) id [656](iD)
+- i want to know the [customer](idType) details
+- [customer](idType) details please
+- [customer](idType) id is [351](iD)
 - give the details of the [ticket](idType) with id [332](iD)  
 - i want to know my [ticket](idType) details
 - details of [ticket](idType) with id [123](iD)
@@ -36,6 +43,9 @@
 - give the [order](idType) details
 - [order](idType) details pls
 - [832](iD)
+- details of [customer](idType) [984](iD)
+- give details for [customer](idType) [765](iD)
+- [customer](idType) details
 - give the details of the [order](idType) with id [83](iD)  
 - i want to know my [order](idType) details
 - details of [order](idType) with id [905](iD)
@@ -63,3 +73,5 @@
 - Give me the [customer](idType) details of [832](iD)
 - that is about a [ticket](idType)
 - [12](iD)
+- i need details of a [customer](idType)
+- i want my [ticket](idType) status

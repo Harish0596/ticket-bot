@@ -357,7 +357,7 @@
 * agent.details{"idType": "customer", "iD": "783"}
     - slot{"idType": "customer"}
     - slot{"iD": "783"}
-    - utter_order_details
+    - utter_customer_details
     - reset_slots
 
 ## story order format 01
@@ -984,4 +984,13 @@
     - utter_user.sleepy
 * greetings.bye
     - utter_greetings.bye
+    - export
+## Generated Story -4782100798520034792
+* greetings.hello
+    - utter_greetings.hello
+* agent.details{"idType": "customer", "iD": "351"}
+    - slot{"idType": "customer"}
+    - slot{"iD": "351"}
+    - utter_customer_details
+    - reset_slots
     - export

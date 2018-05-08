@@ -2,6 +2,7 @@ import logging
 
 from rasa_core.agent import Agent
 from rasa_core.channels.direct import CollectingOutputChannel
+from rasa_core.interpreter import RasaNLUInterpreter
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,7 @@ class TrainingData:
 
     def add_data(self, intent, message):
         """Function which pushes the user message to nlu training data"""
-        path = self.training_data_dir+"/"
+        path = self.training_data_dir + "/"
         self.format_data((path + intent + ".md"), message)
 
 
@@ -126,17 +127,19 @@ class Controller:
                         self.users.get_user(sender_id).get('intent'),
                         self.users.get_user(sender_id).get('message').get('text')))
                 self.users.remove_user(sender_id)
-                return ["I will keep that in mind. Thank you for your response"]
+                return [{"recipient_id": sender_id, "text": "I will keep that in mind. Thank you for your response"}]
             elif intent_name == "confirmation.no" and status == 1:
                 logging.info(
                     'Reinforced user responses NO-LOG: Bot suggested Intent - "{}" : For User Message "{}" '.format(
                         self.users.get_user(sender_id).get('intent'),
                         self.users.get_user(sender_id).get('message').get('text')))
                 self.users.remove_user(sender_id)
-                return ["I will let my developers know about it, thank you for your response"]
+                return [{"recipient_id": sender_id, "text": "I will let my developers know about it, thank you for "
+                                                            "your response"}]
             else:
                 if not respond_data:
-                    respond_data.append("Sorry, I couldn't understand you, can you ask me in another way?")
+                    respond_data.append({"recipient_id": sender_id, "text": "Sorry, I couldn't understand you, can you "
+                                                                            "ask me in another way?"})
                 else:
                     entity_list = []
                     if entities:
@@ -144,12 +147,21 @@ class Controller:
                             entity_list.append({"entity": entity.get("entity"), "entity_value": entity.get("value")})
                     intent_to_add = intent_name
                     data_to_add = {"text": query, "entities": entity_list}
-                    respond_data.append("Did i give you the right response?")
+                    respond_data.append({"recipient_id": sender_id, "text": "Did i give you the right response?"})
                 self.users.update_status(sender_id, 1, intent_to_add, data_to_add)
                 return respond_data
         else:
             if status == 1:
                 self.users.remove_user(sender_id)
             if not respond_data:
-                respond_data.append("Sorry, I couldn't understand you, can you ask me in another way?")
+                respond_data.append({"recipient_id": sender_id, "text": "Sorry, I couldn't understand you, can you "
+                                                                        "ask me in another way?"})
             return respond_data
+
+
+if __name__ == "__main__":
+    c = Controller("models/dialogue/default/dialogue_model", RasaNLUInterpreter("models/nlu/default"
+                                                                                "/nlu_model"), "data/nlu")
+    response = c.get_agent_response("what can you do", "121")
+    parsed = c.get_agent_parsed_response("what can you do", "121")
+    print(c.filter_agent_response("what can you do", "121", parsed, response))

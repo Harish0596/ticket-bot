@@ -90,7 +90,7 @@ class Server(Controller):
         try:
             parse_data = self.get_agent_parsed_response(message, sender_id)
             response_data = self.get_agent_response(message, sender_id)
-            response = self.filter_agent_response(message, sender_id, parse_data, [response_data[0].get('text')])
+            response = self.filter_agent_response(message, sender_id, parse_data, response_data)
             request.setResponseCode(200)
             return json.dumps(response)
         except Exception as e:

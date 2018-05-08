@@ -114,3 +114,6 @@
 - [malayalam](language)
 - [japanese](language)
 - [rat](searchWord)
+- what is the [meaning](searchType) of [chocolate](searchWord)?    
+- what does [chocolate](searchWord) [mean](searchType)
+- what does [coffee](searchWord) [mean](searchType)

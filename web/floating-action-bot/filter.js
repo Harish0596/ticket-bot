@@ -96,7 +96,7 @@ function respond(msg) {
             console.log(responses);
             if (responses) {
                 for (let response of responses) {
-                    createResponder(response);
+                    createResponder(response.text);
             }
             } else {
                 createResponder("Sorry, I'm having trouble understanding you, try asking me in an other way")

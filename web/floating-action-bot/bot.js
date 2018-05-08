@@ -82,11 +82,11 @@ function respond(msg) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            //console.log();
             if (data[0]) {
                 for(let d of data){
                     let li = document.createElement('li');
-                    li.innerHTML = d;
+                    li.innerHTML = d.text;
                     if (voice() == true)
                         speak(li.innerText);
                     li.className = 'responder';
@@ -101,22 +101,6 @@ function respond(msg) {
                 li.appendChild(t)
                 ul.appendChild(li)
                 chat.scrollTop = chat.scrollHeight;
-                fetch(`http://10.149.93.224:5004/respond`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        query: "hi",
-                        id: id
-                    })
-                })
-                    .then(function (response) {
-                        return response.json();
-                    })
-                    .then(function (data) {
-                        console.log("Handled");
-                    })
             }
 
         })
