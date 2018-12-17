@@ -45,7 +45,7 @@ class Server(Controller):
     app = Klein()
 
     def __init__(self, model_directory, interpreter, nlu_training_data_directory):
-        super().__init__(model_directory, interpreter, nlu_training_data_directory)
+        Controller.__init__(self, model_directory, interpreter, nlu_training_data_directory)
 
     @app.route("/api/v1/status", methods=['GET'])
     def status(self, request):
@@ -66,7 +66,7 @@ class Server(Controller):
             request.setResponseCode(400)
             return json.dumps({"error": "Invalid parse parameter specified"})
         try:
-            response = self.agent.start_message_handling(message, sender_id)
+            response = self.agent.handle_text(message)
             request.setResponseCode(200)
             return json.dumps(response)
         except Exception as e:
@@ -102,6 +102,5 @@ class Server(Controller):
 
 if __name__ == "__main__":
     read_yaml()
-    server = Server("models/dialogue/default/dialogue_model", RasaNLUInterpreter("models/nlu/default"
-                                                                                 "/nlu_model"), "data/nlu")
+    server = Server("models/dialogue/dialogue_model", RasaNLUInterpreter("models/nlu/default/nlu_model"), "data/nlu")
     server.app.run("0.0.0.0", 8081)

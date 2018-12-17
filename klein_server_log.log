@@ -793,3 +793,456 @@ NameError: name 'intent_to_add' is not defined
 2018-05-07 17:07:06,513:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "emotions.wow" : For User Message "jygjh" 
 2018-05-07 17:07:11,577:INFO:Reinforced user responses YES-LOG: User added Intent - "emotions.wow" : User added Message "jygjh" 
 2018-05-07 17:10:34,986:INFO:Reinforced user responses YES-LOG: User added Intent - "greetings.how_are_you" : User added Message "how are you" 
+2018-07-18 12:43:31,915:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-07-18 12:46:10,393:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "user.likes_agent" : For User Message "i dont like you" 
+2018-07-18 12:49:14,632:INFO:Reinforced user responses YES-LOG: User added Intent - "agent.bad" : User added Message "you are like an idiot" 
+2018-07-18 13:06:31,645:INFO:Reinforced user responses YES-LOG: User added Intent - "agent.what_can_do" : User added Message "what do you know?" 
+2018-07-18 13:06:46,131:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "greetings.whatsup" : For User Message "k " 
+2018-07-18 13:07:13,756:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "user.busy" : For User Message "i have a problem" 
+2018-07-18 13:07:23,444:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.details" : For User Message "note" 
+2018-07-18 13:07:44,364:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "confirmation.no" : For User Message "i have  problem will you solve that?" 
+2018-07-18 13:11:43,282:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.origin" : For User Message "what is your name?" 
+2018-07-18 13:12:07,798:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.acquaintance" : For User Message "do you know me?" 
+2018-07-18 13:12:52,301:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.can_you_help" : For User Message "make a coffee for me" 
+2018-07-18 13:15:36,877:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "appraisal.good" : For User Message "give me voice response" 
+2018-07-18 13:15:57,642:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "greetings.bye" : For User Message "n" 
+2018-07-18 13:16:13,459:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "appraisal.well_done" : For User Message "fuck off" 
+2018-07-18 13:16:19,961:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "user.joking" : For User Message "fuck" 
+2018-07-18 13:16:23,375:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.chatbot" : For User Message "you are a waste bot" 
+2018-07-18 13:17:44,702:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "user.likes_agent" : For User Message "I hate you" 
+2018-07-18 13:18:47,271:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "confirmation.yes" : For User Message "Okay man" 
+2018-07-19 17:43:11,426:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-07-19 17:56:10,929:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "greetings.how_are_you" : For User Message "What are you doing" 
+2018-07-19 18:23:45,113:INFO:Reinforced user responses YES-LOG: User added Intent - "agent.details" : User added Message "provide me the ticket for the id which i give 66" 
+2018-07-19 18:26:14,074:INFO:Reinforced user responses NO-LOG: Bot suggested Intent - "agent.can_you_help" : For User Message "how can you please can you please give me the details of ID 66" 
+2018-08-06 22:34:27,601:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-08-06 22:45:55,854:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-08-29 23:54:05,358:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-11-02 10:24:16,026:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-11-02 10:26:47,516:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-11-02 10:29:22,725:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-11-02 10:32:21,443:INFO:Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2018-11-15 10:47:32,852:INFO:Restoring parameters from models/nlu/default/model_20181114-173010\intent_classifier_tensorflow_embedding.ckpt
+2018-11-15 10:47:32,904:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. Failed to load domain specification from 'C:\TCL\ChatBot\ticket-bot-master\models\dialogue\default\dialogue_model\domain.yml'. File not found!
+2018-11-15 10:53:47,205:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'start_message_handling'
+Traceback (most recent call last):
+  File "C:/TCL/ChatBot/ticket-bot-master/server.py", line 69, in parse
+    response = self.agent.start_message_handling(message, sender_id)
+AttributeError: 'NoneType' object has no attribute 'start_message_handling'
+2018-11-15 17:47:06,581:INFO:Restoring parameters from models/nlu/default/model_20181114-173010\intent_classifier_tensorflow_embedding.ckpt
+2018-11-15 17:48:02,073:ERROR:Caught an exception during parse: 'Agent' object has no attribute 'start_message_handling'
+Traceback (most recent call last):
+  File "C:/TCL/ChatBot/ticket-bot-master/server.py", line 69, in parse
+    response = self.agent.start_message_handling(message, sender_id)
+AttributeError: 'Agent' object has no attribute 'start_message_handling'
+2018-11-15 17:52:48,460:INFO:Restoring parameters from models/nlu/default/model_20181114-173010\intent_classifier_tensorflow_embedding.ckpt
+2018-11-15 17:53:02,722:ERROR:Caught an exception during parse: 'str' object is not callable
+Traceback (most recent call last):
+  File "C:/TCL/ChatBot/ticket-bot-master/server.py", line 69, in parse
+    response = self.agent.handle_text(message, sender_id)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\agent.py", line 400, in handle_text
+    return self.handle_message(msg, message_preprocessor)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\agent.py", line 316, in handle_message
+    return processor.handle_message(message)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\processor.py", line 82, in handle_message
+    tracker = self.log_message(message)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\processor.py", line 124, in log_message
+    message.text = self.message_preprocessor(message.text)
+TypeError: 'str' object is not callable
+2018-11-15 17:53:59,413:INFO:Restoring parameters from models/nlu/default/model_20181114-173010\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 12:57:42,977:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 12:57:43,024:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. Failed to load domain specification from 'C:\TCL\ChatBot\ticket-bot-master\models\dialogue\domain.yml'. File not found!
+2018-12-02 12:59:08,879:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 69, in parse
+    response = self.agent.handle_text(message)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 14:18:42,021:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 14:20:55,543:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 14:22:37,258:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 14:22:37,289:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 14:22:44,570:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 69, in parse
+    response = self.agent.handle_text(message)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 16:59:16,296:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 16:59:16,317:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 16:59:51,285:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 69, in parse
+    response = self.agent.handle_text(message)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 17:00:05,712:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'start_message_handling'
+Traceback (most recent call last):
+  File "server.py", line 91, in respond
+    parse_data = self.get_agent_parsed_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 107, in get_agent_parsed_response
+    response = self.agent.start_message_handling(message, sender_id)
+AttributeError: 'NoneType' object has no attribute 'start_message_handling'
+2018-12-02 17:03:31,989:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 17:03:32,015:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 17:03:56,521:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'start_message_handling'
+Traceback (most recent call last):
+  File "server.py", line 91, in respond
+    parse_data = self.get_agent_parsed_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 107, in get_agent_parsed_response
+    response = self.agent.start_message_handling(message, sender_id)
+AttributeError: 'NoneType' object has no attribute 'start_message_handling'
+2018-12-02 17:07:31,344:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 17:07:31,372:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 17:07:34,504:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'start_message_handling'
+Traceback (most recent call last):
+  File "server.py", line 91, in respond
+    parse_data = self.get_agent_parsed_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 108, in get_agent_parsed_response
+    response = self.agent.start_message_handling(message, sender_id)
+AttributeError: 'NoneType' object has no attribute 'start_message_handling'
+2018-12-02 18:31:41,768:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:31:41,789:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:32:16,885:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 100, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:32:23,017:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 100, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:36:19,891:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 100, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:38:47,284:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:38:47,310:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:38:55,413:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 101, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:39:32,309:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:39:32,336:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:39:35,466:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 102, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:40:07,046:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:40:07,066:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:40:13,712:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 103, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:40:32,871:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 103, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:41:17,457:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:41:17,488:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:41:22,125:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 104, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 18:46:27,211:INFO:Restoring parameters from ./models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:46:27,242:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:52:26,388:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:55:47,839:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:58:24,120:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 18:58:24,152:WARNING:Failed to load any agent model. Running Rasa Core server with out loaded model now. 'str' object has no attribute 'action'
+2018-12-02 18:58:50,580:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'handle_text'
+Traceback (most recent call last):
+  File "server.py", line 92, in respond
+    response_data = self.get_agent_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 103, in get_agent_response
+    response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
+AttributeError: 'NoneType' object has no attribute 'handle_text'
+2018-12-02 19:12:49,225:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 19:13:31,930:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 19:22:35,780:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 19:36:38,371:ERROR:Failed to run custom action 'action_ticket_details'. Couldn't connect to the server at 'http://localhost:2655/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE087A5B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+2018-12-02 19:36:38,372:ERROR:Encountered an exception while running action 'action_ticket_details'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+2018-12-02 19:36:38,372:ERROR:Failed to execute custom action.
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\TCL\Python\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\TCL\Python\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001CE087A5B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE087A5B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\rasa_core\actions\action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\utils.py", line 748, in request
+    **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\sessions.py", line 524, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\sessions.py", line 637, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE087A5B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\rasa_core\processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\actions\action.py", line 348, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+2018-12-02 19:37:54,622:ERROR:Failed to run custom action 'action_ticket_details'. Couldn't connect to the server at 'http://localhost:2655/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE06EE9CF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+2018-12-02 19:37:54,623:ERROR:Encountered an exception while running action 'action_ticket_details'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+2018-12-02 19:37:54,623:ERROR:Failed to execute custom action.
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\TCL\Python\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\TCL\Python\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001CE06EE9CF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE06EE9CF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\rasa_core\actions\action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\utils.py", line 748, in request
+    **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\sessions.py", line 524, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\sessions.py", line 637, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE06EE9CF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\rasa_core\processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\actions\action.py", line 348, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+2018-12-02 19:38:02,615:ERROR:Failed to run custom action 'action_ticket_details'. Couldn't connect to the server at 'http://localhost:2655/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE06F0D7B8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+2018-12-02 19:38:02,616:ERROR:Encountered an exception while running action 'action_ticket_details'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+2018-12-02 19:38:02,616:ERROR:Failed to execute custom action.
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\TCL\Python\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\TCL\Python\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\TCL\Python\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\TCL\Python\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001CE06F0D7B8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\TCL\Python\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\TCL\Python\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE06F0D7B8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\rasa_core\actions\action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\utils.py", line 748, in request
+    **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\sessions.py", line 524, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\sessions.py", line 637, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\TCL\Python\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=2655): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE06F0D7B8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\TCL\Python\lib\site-packages\rasa_core\processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "C:\TCL\Python\lib\site-packages\rasa_core\actions\action.py", line 348, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+2018-12-02 19:39:42,501:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 19:42:00,782:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 19:42:18,245:ERROR:Caught an exception during parse: 'Agent' object has no attribute 'start_message_handling'
+Traceback (most recent call last):
+  File "server.py", line 91, in respond
+    parse_data = self.get_agent_parsed_response(message, sender_id)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 106, in get_agent_parsed_response
+    response = self.agent.start_message_handling(message, sender_id)
+AttributeError: 'Agent' object has no attribute 'start_message_handling'
+2018-12-02 20:28:10,827:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:28:34,803:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:28:35,229:ERROR:Caught an exception during parse: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 117, in filter_agent_response
+    intent_name = parsed_data.get('tracker').get('latest_message').get('intent').get('name')
+AttributeError: 'NoneType' object has no attribute 'get'
+2018-12-02 20:33:18,091:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:33:34,306:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:33:46,494:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:33:46,633:ERROR:Caught an exception during parse: name 'intent_to_add' is not defined
+Traceback (most recent call last):
+  File "server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 160, in filter_agent_response
+    self.users.update_status(sender_id, 1, intent_to_add, data_to_add)
+NameError: name 'intent_to_add' is not defined
+2018-12-02 20:34:09,636:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:34:09,809:ERROR:Caught an exception during parse: name 'intent_to_add' is not defined
+Traceback (most recent call last):
+  File "server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 160, in filter_agent_response
+    self.users.update_status(sender_id, 1, intent_to_add, data_to_add)
+NameError: name 'intent_to_add' is not defined
+2018-12-02 20:34:27,393:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:34:36,129:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:34:36,266:ERROR:Caught an exception during parse: name 'intent_to_add' is not defined
+Traceback (most recent call last):
+  File "server.py", line 93, in respond
+    response = self.filter_agent_response(message, sender_id, parse_data, response_data)
+  File "C:\TCL\ChatBot\ticket-bot-master\server_controller.py", line 160, in filter_agent_response
+    self.users.update_status(sender_id, 1, intent_to_add, data_to_add)
+NameError: name 'intent_to_add' is not defined
+2018-12-02 20:41:44,940:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-02 20:42:17,615:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-17 12:20:54,731:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-17 12:22:03,669:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-17 12:22:08,355:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-17 12:22:14,704:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-17 12:22:18,309:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt
+2018-12-17 12:22:42,523:INFO:Restoring parameters from models/nlu/default/nlu_model\intent_classifier_tensorflow_embedding.ckpt

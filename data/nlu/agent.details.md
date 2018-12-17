@@ -75,3 +75,4 @@
 - [12](iD)
 - i need details of a [customer](idType)
 - i want my [ticket](idType) status
+- provide me the [ticket](idType) for the id which i give [66](iD)

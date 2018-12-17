@@ -1,3 +1,4 @@
+
 ## intent:greetings.goodmorning
 - GM
 - good morning

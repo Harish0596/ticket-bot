@@ -2,15 +2,16 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
 
-from rasa_core.actions.action import Action
-from rasa_core.events import AllSlotsReset
-from soup import search_weather_details, search_word_meaning, translate_word, search_restaurants
+from rasa_core_sdk import Action
+from rasa_core_sdk.events import AllSlotsReset
+
 from details import get_ticket_status, get_customer_details, get_order_details
+from soup import search_weather_details, search_word_meaning, translate_word, search_restaurants
 
 
 class GetCustomerDetails(Action):
     def name(self):
-        return 'utter_customer_details'
+        return 'action_customer_details'
 
     def run(self, dispatcher, tracker, domain):
         customer_id = str(tracker.get_slot('iD'))
@@ -23,14 +24,14 @@ class GetCustomerDetails(Action):
                 dispatcher.utter_message(message)
             return [AllSlotsReset()]
         elif id_type == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_IdType"))
+            dispatcher.utter_template("utter_ask_IdType", tracker)
         elif customer_id == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_Id"))
+            dispatcher.utter_template("utter_ask_Id", tracker)
 
 
 class GetOrderDetails(Action):
     def name(self):
-        return 'utter_order_details'
+        return 'action_order_details'
 
     def run(self, dispatcher, tracker, domain):
         order_id = str(tracker.get_slot('iD'))
@@ -43,14 +44,14 @@ class GetOrderDetails(Action):
                 dispatcher.utter_message(message)
             return [AllSlotsReset()]
         elif id_type == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_IdType"))
+            dispatcher.utter_template("utter_ask_IdType", tracker)
         elif order_id == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_Id"))
+            dispatcher.utter_template("utter_ask_Id", tracker)
 
 
 class GetTicketDetails(Action):
     def name(self):
-        return 'utter_ticket_details'
+        return 'action_ticket_details'
 
     def run(self, dispatcher, tracker, domain):
         ticket_id = str(tracker.get_slot('iD'))
@@ -63,14 +64,14 @@ class GetTicketDetails(Action):
                 dispatcher.utter_message(message)
             return [AllSlotsReset()]
         elif id_type == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_IdType"))
+            dispatcher.utter_template("utter_ask_IdType", tracker)
         elif ticket_id == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_Id"))
+            dispatcher.utter_template("utter_ask_Id", tracker)
 
 
 class GetTranslation(Action):
     def name(self):
-        return 'utter_translate_data'
+        return 'action_translate_data'
 
     def run(self, dispatcher, tracker, domain):
         word = str(tracker.get_slot('searchWord'))
@@ -81,16 +82,16 @@ class GetTranslation(Action):
             dispatcher.utter_message(message)
             return [AllSlotsReset()]
         elif search_type == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_specific"))
+            dispatcher.utter_template("utter_specific", tracker)
         elif word == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_word"))
+            dispatcher.utter_template("utter_ask_word", tracker)
         elif language == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_language"))
+            dispatcher.utter_template("utter_ask_language", tracker)
 
 
 class GetWeatherDetails(Action):
     def name(self):
-        return 'utter_weather_details'
+        return 'action_weather_details'
 
     def run(self, dispatcher, tracker, domain):
         search_type = str(tracker.get_slot('searchType'))
@@ -100,14 +101,14 @@ class GetWeatherDetails(Action):
             dispatcher.utter_message(message)
             return [AllSlotsReset()]
         elif search_type == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_specific"))
+            dispatcher.utter_template("utter_specific", tracker)
         elif location == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_location"))
+            dispatcher.utter_template("utter_ask_location", tracker)
 
 
 class GetWordMeaning(Action):
     def name(self):
-        return 'utter_word_meaning'
+        return 'action_word_meaning'
 
     def run(self, dispatcher, tracker, domain):
         search_type = str(tracker.get_slot('searchType'))
@@ -117,14 +118,14 @@ class GetWordMeaning(Action):
             dispatcher.utter_message(message)
             return [AllSlotsReset()]
         elif search_type == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_specific"))
+            dispatcher.utter_template("utter_specific", tracker)
         elif word == "None":
-            tracker.trigger_follow_up_action(domain.action_for_name("utter_ask_word"))
+            dispatcher.utter_template("utter_ask_word", tracker)
 
 
 class GetRestaurant(Action):
     def name(self):
-        return 'utter_restaurant_details'
+        return 'action_restaurant_details'
 
     def run(self, dispatcher, tracker, domain):
         area = str(tracker.get_slot('area'))

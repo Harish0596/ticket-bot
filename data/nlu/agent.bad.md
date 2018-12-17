@@ -33,3 +33,4 @@
 - your are a loser
 - you are really the worst bot ever
 - Why are you this lame?
+- you are like an idiot

@@ -609,12 +609,18 @@ templates:
         - "Okay then."
 
 actions:
-  - actions.GetCustomerDetails
-  - actions.GetOrderDetails
-  - actions.GetTranslation
-  - actions.GetTicketDetails
-  - actions.GetWeatherDetails
-  - actions.GetWordMeaning
+#  - actions.GetCustomerDetails
+#  - actions.GetOrderDetails
+#  - actions.GetTranslation
+#  - actions.GetTicketDetails
+#  - actions.GetWeatherDetails
+#  - actions.GetWordMeaning
+  - action_customer_details
+  - action_order_details
+  - action_ticket_details
+  - action_weather_details
+  - action_translate_data
+  - action_word_meaning
   - utter_agent.acquaintance
   - utter_agent.age
   - utter_agent.annoying

@@ -1,0 +1,252 @@
+{
+   "status": "success",
+   "data": {
+      "endpoints": [{
+         "hostName": " ",
+         "locationName": "IN",
+         "apiUrl": " ",
+         "locationId": 4,
+         "ip": " ",
+         "endpointTypeId": 10,
+         "name": "AZ_PROD",
+         "hypervisors": null,
+         "id": 8,
+         "endpointTypeName": "Azure",
+         "status": 1
+      }],
+      "assignedEndpoints": [{
+         "hostName": " ",
+         "locationName": "IN",
+         "ip": " ",
+         "endpointTypeName": "Azure",
+         "engagementEndpointId": 69,
+         "apiUrl": " ",
+         "locationId": 4,
+         "endpointTypeId": 10,
+         "name": "AZ_SANDBOX",
+         "hypervisors": null,
+         "id": 7,
+         "properties": [{
+            "displayValue": "HYPERV",
+            "name": "Hypervisor Choice",
+            "value": "HYPERV"
+         }, {
+            "displayValue": "CSP",
+            "name": "Customer Type",
+            "value": "CSP"
+         }, {
+            "displayValue": "e1eb09ca-9af9-48a4-a4b4-07999f9eeebb",
+            "name": "Account ID",
+            "value": "e1eb09ca-9af9-48a4-a4b4-07999f9eeebb"
+         }, {
+            "displayValue": "BCB3BAB8-0861-4C88-9161-F32A8ADFE338",
+            "name": "Subscription ID",
+            "value": "BCB3BAB8-0861-4C88-9161-F32A8ADFE338"
+         }, {
+            "displayValue": "FutureNow Azure",
+            "name": "Subscription Name",
+            "value": "FutureNow Azure"
+         }, {
+            "displayValue": "bharatdesignservices.onmicrosoft.com",
+            "name": "Domain",
+            "value": "bharatdesignservices.onmicrosoft.com"
+         }, {
+            "displayValue": "Anupriya.Arunkanna@tclsandbox.onmicrosoft.com",
+            "name": "username",
+            "value": "Anupriya.Arunkanna@tclsandbox.onmicrosoft.com"
+         }, {
+            "displayValue": "AzureDec@17",
+            "name": "password",
+            "value": "AzureDec@17"
+         }],
+         "engagementEndpointStatus": 1,
+         "status": 1
+      }],
+      "partnerName": "Tata Communications Ltd",
+      "engagementName": "Future Now Enterprises-AZURE",
+      "sfdc": "4567",
+      "engagementType": "AZURE",
+      "customerCode": "XEF",
+      "serviceName": "AZURE",
+      "customerName": "Future Now Enterprises",
+      "DR": {},
+      "itsm_customerid": 2866,
+      "is_partner_user": 0,
+      "provisioned": {
+         "used_vDisk": 0,
+         "ava_SAS": 0,
+         "ava_SSD": 0,
+         "used_vCpu": 0,
+         "ava_vCpu": 0,
+         "ava_vDisk": 0,
+         "ava_vRam": 0,
+         "total_vDisk": 0,
+         "used_vRam": 0,
+         "total_SATA": 0,
+         "used_SATA": 0,
+         "total_SSD": 0,
+         "total_vRam": 0,
+         "total_SAS": 0,
+         "ava_SATA": 0,
+         "total_vCpu": 0,
+         "used_SAS": 0,
+         "used_SSD": 0
+      },
+      "orders": [{
+         "isApprovedOn": 1516707401000,
+         "orderId": 75,
+         "isApprovedBy": "anuparun",
+         "orderDetail": [{
+            "quantity": 1,
+            "name": "Endpoints",
+            "attributes": [{
+               "name": "Name",
+               "attributes": [{
+                  "name": "Customer Type",
+                  "attributes": [],
+                  "value": "CSP"
+               }, {
+                  "name": "Account ID",
+                  "attributes": [],
+                  "value": "e1eb09ca-9af9-48a4-a4b4-07999f9eeebb"
+               }, {
+                  "name": "Subscription ID",
+                  "attributes": [],
+                  "value": "BCB3BAB8-0861-4C88-9161-F32A8ADFE338"
+               }, {
+                  "name": "Subscription Name",
+                  "attributes": [],
+                  "value": "FutureNow Azure"
+               }, {
+                  "name": "Domain",
+                  "attributes": [],
+                  "value": "bharatdesignservices.onmicrosoft.com"
+               }, {
+                  "name": "username",
+                  "attributes": [],
+                  "value": "Anupriya.Arunkanna@tclsandbox.onmicrosoft.com"
+               }, {
+                  "name": "password",
+                  "attributes": [],
+                  "value": "AzureDec@17"
+               }],
+               "value": "AZ_SANDBOX"
+            }],
+            "id": 930,
+            "isActive": 1
+         }],
+         "coffId": "null",
+         "isApproved": 1,
+         "isActive": 1,
+         "engagementId": 69,
+         "ticketId": null
+      }],
+      "id": 69,
+      "partnerId": 1,
+      "partner_order_details": [{
+         "isApprovedOn": "2017-09-19 05:18:09",
+         "orderId": 14,
+         "isApprovedBy": "ravichn",
+         "orderDetail": [{
+            "quantity": 50000000,
+            "name": "vDisk",
+            "attributes": [],
+            "id": 174,
+            "isActive": 1
+         }, {
+            "quantity": 2400000,
+            "name": "vCPU",
+            "attributes": [],
+            "id": 175,
+            "isActive": 1
+         }, {
+            "quantity": 2400000,
+            "name": "vRAM",
+            "attributes": [],
+            "id": 176,
+            "isActive": 1
+         }, {
+            "quantity": 0,
+            "name": "LB",
+            "attributes": [],
+            "id": 177,
+            "isActive": 1
+         }, {
+            "quantity": 1,
+            "name": "Managed",
+            "attributes": [],
+            "id": 178,
+            "isActive": 1
+         }, {
+            "quantity": 1,
+            "name": "PPU",
+            "attributes": [],
+            "id": 179,
+            "isActive": 1
+         }, {
+            "quantity": 500,
+            "name": "Firewall",
+            "attributes": [],
+            "id": 180,
+            "isActive": 1
+         }, {
+            "quantity": 1,
+            "name": "Endpoints",
+            "attributes": [],
+            "id": 181,
+            "isActive": 1
+         }, {
+            "quantity": 1,
+            "name": "Hypervisor",
+            "attributes": [{
+               "name": "Hypervisor",
+               "attributes": [],
+               "value": "KVM,ESXI,HYPERV"
+            }],
+            "id": 182,
+            "isActive": 1
+         }, {
+            "quantity": 1,
+            "name": "Fixed",
+            "attributes": [],
+            "id": 183,
+            "isActive": 1
+         }, {
+            "quantity": 1200000,
+            "name": "SAS",
+            "attributes": [],
+            "id": 184,
+            "isActive": 1
+         }, {
+            "quantity": 1200000,
+            "name": "SATA",
+            "attributes": [],
+            "id": 185,
+            "isActive": 1
+         }, {
+            "quantity": 1200000,
+            "name": "SSD",
+            "attributes": [],
+            "id": 186,
+            "isActive": 1
+         }],
+         "partnerId": 1,
+         "coffId": "dummy",
+         "isApproved": 1,
+         "isActive": 1,
+         "ticketId": null
+      }],
+      "serviceId": 21,
+      "isPayperuse": 2,
+      "itsm_engagementid": 13418,
+      "utilized": {
+         "used_vram": 0,
+         "prov_vram": 0,
+         "prov_vdisk": 0,
+         "used_vcpu": 0,
+         "prov_vcpu": 0,
+         "used_vdisk": 0
+      },
+      "firewalltype": "Shared"
+   }
+}

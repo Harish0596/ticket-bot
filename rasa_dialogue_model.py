@@ -5,28 +5,24 @@ from __future__ import unicode_literals
 
 import logging
 
+from rasa_core import config
 from rasa_core.agent import Agent
-from rasa_core.policies.keras_policy import KerasPolicy
-from rasa_core.policies.memoization import MemoizationPolicy
+from rasa_core.interpreter import RasaNLUInterpreter
 
 logger = logging.getLogger(__name__)
 
 
-def train_dialogue(domain_file='domain.yml',
-                   model_path='./models/dialogue/default/dialogue_model',
-                   training_data_file='./data/dialogue/stories.md'):
-    agent = Agent(domain_file, policies=[MemoizationPolicy(), KerasPolicy()])
-
-    agent.train(
-        training_data_file,
-        max_history=3,
-        epochs=150,
-        batch_size=50,
-        validation_split=0.2)
-
-    agent.persist(model_path)
+def train_dialogue_model(domain_file, stories_file, output_path, interpreter, policy_config):
+    policies = config.load(policy_config)
+    agent = Agent(domain_file, policies=policies, interpreter=interpreter)
+    training_data = agent.load_data(stories_file)
+    agent.train(training_data)
+    agent.persist(output_path)
     return agent
 
 
 if __name__ == '__main__':
-    train_dialogue()
+    logging.basicConfig(level="INFO")
+    nlu_interpreter = RasaNLUInterpreter('./models/nlu/default/nlu_model')
+    train_dialogue_model('domain.yml', './data/dialogue/', './models/dialogue/dialogue_model', nlu_interpreter,
+                         policy_config='policy_config.yml')

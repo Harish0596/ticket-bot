@@ -1,0 +1,161 @@
+{
+   "responseCode": 0,
+   "traceId": "fd7e5aca-bfd9-426a-91d3-dc830fd1c653",
+   "message": "",
+   "data": {
+      "tickets": [{
+         "id": 66,
+         "displayId": "INC0000001024",
+         "engagementName": "CSP Test Customer-Managed Hosting",
+         "engagementId": null,
+         "customerId": "ae1246feb23",
+         "customerName": "Willie Reynolds",
+         "title": "CSP Test Customer_test Asset_ZSDF1_013_DONT_USE_FOR_TEST",
+         "priorityId": null,
+         "priorityName": "P2",
+         "createdTime": "2018-03-01 11:09:46 IST",
+         "slaExpiresOn": null,
+         "status": "In Progress",
+         "customerStatus": "In Progress",
+         "ownerId": "MPATRO",
+         "ownerEmail": null,
+         "reopenedTime": null,
+         "assignedTo": "Development Team",
+         "requester": null,
+         "uploadedPriorityId": null,
+         "uploadedPriorityName": null,
+         "category": null,
+         "initiatorId": "MPATRO",
+         "initiatorEmail": null,
+         "rootCause": null,
+         "reportedIssueType": "DONT_USE_FOR_TEST",
+         "calloutDuetime": null,
+         "description": "fdgdfgf",
+         "primaryCiId": null,
+         "primaryCiName": null,
+         "customerType": "Gold",
+         "customerUpdatedById": null,
+         "customerUpdatedByEmail": null,
+         "customerUpdatedTime": "2018-03-01 11:35:04 IST",
+         "pendingWithVendor": null,
+         "isVIP": null,
+         "ticketType": "1",
+         "ticketTypeName": "Incident",
+         "impactType": null,
+         "lastUpdateTime": "2018-03-01 11:35:04 IST",
+         "ticketCategory": null,
+         "impactId": null,
+         "lastUpdatedBy": null
+      }, {
+         "id": 234,
+         "displayId": "INC00020",
+         "engagementName": "CSP Test Customer-Managed Hosting",
+         "engagementId": null,
+         "customerId": "be6746mar23",
+         "customerName": "Tiffany Dillon",
+         "title": "CSP Test Customer_test Asset_ZSDF1_013_DONT_USE_FOR_TEST",
+         "priorityId": null,
+         "priorityName": "P3",
+         "createdTime": "2018-03-02 11:22:36 IST",
+         "slaExpiresOn": null,
+         "status": "In Progress",
+         "customerStatus": "In Progress",
+         "ownerId": "raja.anbazhagan@tatacommunications.com",
+         "ownerEmail": null,
+         "reopenedTime": null,
+         "assignedTo": "Development Team",
+         "requester": null,
+         "uploadedPriorityId": null,
+         "uploadedPriorityName": null,
+         "category": null,
+         "initiatorId": "raja.anbazhagan@tatacommunications.com",
+         "initiatorEmail": null,
+         "rootCause": null,
+         "reportedIssueType": "DONT_USE_FOR_TEST",
+         "calloutDuetime": null,
+         "description": "TEST TICKET PLEASE INGORE",
+         "primaryCiId": null,
+         "primaryCiName": null,
+         "customerType": "Gold",
+         "customerUpdatedById": null,
+         "customerUpdatedByEmail": null,
+         "customerUpdatedTime": "2018-03-02 21:20:23 IST",
+         "pendingWithVendor": null,
+         "isVIP": null,
+         "ticketType": "1",
+         "ticketTypeName": "Incident",
+         "impactType": null,
+         "lastUpdateTime": "2018-03-02 21:43:18 IST",
+         "ticketCategory": null,
+         "impactId": null,
+         "lastUpdatedBy": null
+      }],
+      "pagination": {
+         "number": 0,
+         "last": true,
+         "size": 100,
+         "numberOfElements": 2,
+         "totalPages": 1,
+         "sort": [{
+            "direction": "ASC",
+            "property": "customer.customerType.sortOrder",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": true
+         }, {
+            "direction": "ASC",
+            "property": "customer.customerType.sortOrder",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": true
+         }],
+         "first": true,
+         "totalElements": 2
+      },
+      "fields": [{
+         "label": "Ticket Id",
+         "sortable": 1,
+         "key": "id"
+      }, {
+         "label": "Engagement",
+         "sortable": 1,
+         "key": "engagementName"
+      }, {
+         "label": "Title",
+         "sortable": 1,
+         "key": "title"
+      }, {
+         "label": "Priority",
+         "sortable": 1,
+         "key": "priorityName"
+      }, {
+         "label": "Issue Type",
+         "sortable": 1,
+         "key": "reportedIssueType"
+      }, {
+         "label": "Assigned To",
+         "sortable": 1,
+         "key": "assignedTo"
+      }, {
+         "label": "Status",
+         "sortable": 1,
+         "key": "status"
+      }, {
+         "label": "Created On",
+         "sortable": 1,
+         "key": "createdTime"
+      }, {
+         "label": "Owned By",
+         "sortable": 1,
+         "key": "ownerId"
+      }, {
+         "label": "Last Updated On",
+         "sortable": 1,
+         "key": "lastUpdateTime"
+      }],
+      "actions": {
+         "canExportIncidentsAsCsv": "canExportIncidentsAsCsv",
+         "canExportRequestsAsCsv": "canExportRequestsAsCsv"
+      }
+   }
+}

@@ -350,21 +350,21 @@
 * agent.details{"idType": "ticket", "iD": "273"}
     - slot{"idType": "ticket"}
     - slot{"iD": "273"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 
 ## story customer format 01
 * agent.details{"idType": "customer", "iD": "783"}
     - slot{"idType": "customer"}
     - slot{"iD": "783"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 
 ## story order format 01
 * agent.details{"idType": "order", "iD": "43"}
     - slot{"idType": "order"}
     - slot{"iD": "43"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 
 ## story ticket format 02
@@ -373,7 +373,7 @@
     - utter_ask_idType
 * agent.details{"idType": "ticket"}
     - slot{"idType": "ticket"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 
 ## story customer format 02
@@ -382,7 +382,7 @@
     - utter_ask_idType
 * agent.details{"idType": "customer"}
     - slot{"idType": "customer"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 
 ## story order format 02
@@ -391,7 +391,7 @@
     - utter_ask_idType
 * agent.details{"idType": "order"}
     - slot{"idType": "order"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 
 ## story ticket format 03
@@ -400,7 +400,7 @@
     - utter_ask_Id
 * agent.details{"iD": "234"}
     - slot{"iD": "234"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 
 ## story customer format 03
@@ -409,7 +409,7 @@
     - utter_ask_Id
 * agent.details{"iD": "382"}
     - slot{"iD": "382"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 
 ## story order format 03
@@ -418,14 +418,14 @@
     - utter_ask_Id
 * agent.details{"iD": "987"}
     - slot{"iD": "987"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 
 ## story weather format 01
 * agent.extras{"searchType":"temperature", "GPE":"Hyderabad"}
   - slot{"searchType": "temperature"}
   - slot{"GPE": "Hyderabad"}
-  - utter_weather_details
+  - action_weather_details
   - reset_slots
 
 ## story translate format 01
@@ -433,14 +433,14 @@
   - slot{"searchType":"translate"}
   - slot{"searchWord":"pen"}
   - slot{"language":"malayalam"}
-  - utter_translate_data
+  - action_translate_data
   - reset_slots
 
 ##story meaning format 01
 * agent.extras{"searchType":"meaning", "searchWord":"insomnia"}
   - slot{"searchType":"meaning"}
   - slot{"searchWord":"insomnia"}
-  - utter_word_meaning
+  - action_word_meaning
   - reset_slots
 
 ## story weather format 02
@@ -449,7 +449,7 @@
   - utter_specific
 * agent.extras{"searchType":"temperature"}
   - slot{"searchType":"temperature"}
-  - utter_weather_details
+  - action_weather_details
   - reset_slots
 
 ## story translate format 02
@@ -461,7 +461,7 @@
   - utter_ask_language
 * agent.extras{"language": "tamil"}
   - slot{"language": "tamil"}
-    - utter_translate_data
+    - action_translate_data
     - reset_slots
 
 ## story meaning format 02
@@ -470,7 +470,7 @@
   - utter_specific
 * agent.extras{"searchType":"mean"}
   - slot{"searchType":"mean"}
-  - utter_word_meaning
+  - action_word_meaning
   - reset_slots
 
 ## story weather format 03
@@ -479,7 +479,7 @@
   - utter_ask_location
 * agent.extras{"GPE":"vijayawada"}
   - slot{"GPE":"vijayawada"}
-  - utter_weather_details
+  - action_weather_details
   - reset_slots
 
 ## story translate format 03
@@ -491,7 +491,7 @@
   - utter_ask_language
 * agent.extras{"language":"malayalam"}
   - slot{"language":"malayalam"}
-  - utter_translate_data    
+  - action_translate_data    
   - reset_slots
 
 ## story meaning format 03
@@ -500,7 +500,7 @@
   - utter_ask_word
 * agent.extras{"searchWord":"architecture"}
   - slot{"searchWord":"architecture"}
-  - utter_word_meaning
+  - action_word_meaning
   - reset_slots
 
 ## story translate format 04
@@ -510,7 +510,7 @@
     - utter_ask_language
 * agent.extras{"language":"Malayalam"}
     - slot{"language":"Malayalam"}
-    - utter_translate_data
+    - action_translate_data
     - reset_slots
  
 ## Generated Story -1638392932506130365
@@ -521,7 +521,7 @@
     - utter_specific
 * agent.extras{"searchType": "weather"}
     - slot{"searchType": "weather"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * greetings.hello
     - utter_greetings.hello
@@ -530,14 +530,14 @@
     - utter_ask_word
 * user.going_to_bed{"searchWord": "towel"}
     - slot{"searchWord": "towel"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * agent.can_you_help
     - utter_agent.can_you_help
 * agent.details{"idType": "ticket", "iD": "234"}
     - slot{"idType": "ticket"}
     - slot{"iD": "234"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 * appraisal.thank_you
     - utter_appraisal.thank_you
@@ -548,7 +548,7 @@
 * agent.extras{"searchType": "meaning", "searchWord": "custom"}
     - slot{"searchType": "meaning"}
     - slot{"searchWord": "custom"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * appraisal.good{"language": "nice"}
     - slot{"language": "nice"}
@@ -557,7 +557,7 @@
     - slot{"searchType": "translate"}
     - slot{"searchWord": "pen"}
     - slot{"language": "tamil"}
-    - utter_translate_data
+    - action_translate_data
     - reset_slots
 * appraisal.good{"language": "super"}
     - slot{"language": "super"}
@@ -574,28 +574,28 @@
     - utter_ask_location
 * agent.extras{"GPE": "madurai"}
     - slot{"GPE": "madurai"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * greetings.hello
     - utter_greetings.hello
 * agent.extras{"searchType": "climate", "GPE": "hyderabad"}
     - slot{"searchType": "climate"}
     - slot{"GPE": "hyderabad"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * greetings.how_are_you
     - utter_greetings.how_are_you
 * agent.extras{"searchType": "meaning", "searchWord": "computer"}
     - slot{"searchType": "meaning"}
     - slot{"searchWord": "computer"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * agent.extras{"searchType": "weather"}
     - slot{"searchType": "weather"}
     - utter_ask_location
 * agent.extras{"GPE": "mumbai"}
     - slot{"GPE": "mumbai"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * confirmation.yes
     - utter_confirmation.yes
@@ -614,7 +614,7 @@
 * agent.details{"idType": "order", "iD": "321"}
     - slot{"idType": "order"}
     - slot{"iD": "321"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 * appraisal.thank_you
     - utter_appraisal.thank_you
@@ -627,12 +627,12 @@
     - utter_ask_idType
 * agent.details{"idType": "order"}
     - slot{"idType": "order"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 * agent.extras{"searchWord": "aperture", "searchType": "mean"}
     - slot{"searchWord": "aperture"}
     - slot{"searchType": "mean"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * user.sleepy
     - utter_user.sleepy
@@ -645,16 +645,14 @@
 * agent.extras{"searchWord": "rat", "searchType": "meaning"}
     - slot{"searchWord": "rat"}
     - slot{"searchType": "meaning"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
-* 
-    - utter_ask_again
 * agent.details{"idType": "customer"}
     - slot{"idType": "customer"}
     - utter_ask_Id
 * agent.details{"iD": "351"}
     - slot{"iD": "351"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 * greetings.bye
     - utter_greetings.bye
@@ -679,15 +677,13 @@
 * agent.details{"idType": "order", "iD": "67"}
     - slot{"idType": "order"}
     - slot{"iD": "67"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 * agent.extras{"searchWord": "furious", "searchType": "meaning"}
     - slot{"searchWord": "furious"}
     - slot{"searchType": "meaning"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
-* 
-    - utter_ask_again
 * agent.details{"idType": "customer"}
     - slot{"idType": "customer"}
     - utter_ask_Id
@@ -702,7 +698,7 @@
     - utter_ask_Id
 * agent.details{"iD": "3511413"}
     - slot{"iD": "3511413"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 * greetings.bye
     - utter_greetings.bye
@@ -723,7 +719,7 @@
     - utter_agent.fired
 * agent.details{"iD": "351"}
     - slot{"iD": "351"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 * greetings.bye
     - utter_greetings.bye
@@ -744,14 +740,14 @@
     - utter_specific
 * agent.extras{"searchType": "meaning"}
     - slot{"searchType": "meaning"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * agent.extras{"searchType": "weather"}
     - slot{"searchType": "weather"}
     - utter_ask_location
 * agent.extras{"GPE": "jaipur"}
     - slot{"GPE": "jaipur"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * agent.extras{"searchType": "translate"}
     - slot{"searchType": "translate"}
@@ -763,14 +759,14 @@
     - utter_ask_language
 * agent.extras{"language": "tamil"}
     - slot{"language": "tamil"}
-    - utter_translate_data
+    - action_translate_data
     - reset_slots
 * agent.extras{"searchType": "meaning"}
     - slot{"searchType": "meaning"}
     - utter_ask_word
 * agent.extras{"searchWord": "encyclopedia"}
     - slot{"searchWord": "encyclopedia"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
     - export
     
@@ -779,7 +775,7 @@
     - utter_greetings.hello
 * agent.extras{"searchType": "weather"}
     - slot{"searchType": "weather"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * agent.extras{"searchType": "meaning"}
     - slot{"searchType": "meaning"}
@@ -792,14 +788,14 @@
     - utter_specific
 * agent.extras{"searchType": "meaning"}
     - slot{"searchType": "meaning"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * agent.extras{"searchType": "weather"}
     - slot{"searchType": "weather"}
     - utter_ask_location
 * agent.extras{"GPE": "chennai"}
     - slot{"GPE": "chennai"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * greetings.how_are_you
     - utter_greetings.how_are_you
@@ -824,7 +820,7 @@
     - utter_ask_Id
 * agent.details{"iD": "234"}
     - slot{"iD": "234"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 * agent.good
     - utter_agent.good
@@ -836,7 +832,7 @@
 * agent.details{"idType": "customer", "iD": "351"}
     - slot{"idType": "customer"}
     - slot{"iD": "351"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 * appraisal.good{"language": "super"}
     - slot{"language": "super"}
@@ -848,7 +844,7 @@
 * agent.extras{"searchType": "weather", "GPE": "kulumanali"}
     - slot{"searchType": "weather"}
     - slot{"GPE": "kulumanali"}
-    - utter_weather_details
+    - action_weather_details
     - reset_slots
 * agent.good
     - utter_agent.good
@@ -883,7 +879,7 @@
 * agent.extras{"searchType": "meaning", "searchWord": "alluring"}
     - slot{"searchType": "meaning"}
     - slot{"searchWord": "alluring"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * user.excited
     - utter_user.excited
@@ -897,7 +893,7 @@
     - slot{"searchType": "translate"}
     - slot{"searchWord": "cat"}
     - slot{"language": "hindi"}
-    - utter_translate_data
+    - action_translate_data
     - reset_slots
 * emotions.wow
     - utter_emotions.wow
@@ -908,7 +904,7 @@
     - utter_ask_idType
 * agent.details{"idType": "ticket"}
     - slot{"idType": "ticket"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 * confirmation.yes
     - utter_confirmation.yes
@@ -928,14 +924,14 @@
     - utter_ask_Id
 * agent.details{"iD": "234"}
     - slot{"iD": "234"}
-    - utter_ticket_details
+    - action_ticket_details
     - reset_slots
 * agent.extras{"searchType": "meaning"}
     - slot{"searchType": "meaning"}
     - utter_ask_word
 * agent.extras{"searchWord": "architecture"}
     - slot{"searchWord": "architecture"}
-    - utter_word_meaning
+    - action_word_meaning
     - reset_slots
 * confirmation.yes
     - utter_confirmation.yes
@@ -947,7 +943,7 @@
 * agent.details{"idType": "customer", "iD": "153"}
     - slot{"idType": "customer"}
     - slot{"iD": "153"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
 * confirmation.yes
     - utter_confirmation.yes
@@ -959,7 +955,7 @@
     - utter_ask_language
 * agent.extras{"language": "tamil"}
     - slot{"language": "tamil"}
-    - utter_translate_data
+    - action_translate_data
     - reset_slots
 * appraisal.good
     - utter_confirmation.yes
@@ -968,7 +964,7 @@
     - utter_ask_idType
 * agent.details{"idType": "order"}
     - slot{"idType": "order"}
-    - utter_order_details
+    - action_order_details
     - reset_slots
 * appraisal.good
     - utter_appraisal.good
@@ -991,6 +987,6 @@
 * agent.details{"idType": "customer", "iD": "351"}
     - slot{"idType": "customer"}
     - slot{"iD": "351"}
-    - utter_customer_details
+    - action_customer_details
     - reset_slots
     - export

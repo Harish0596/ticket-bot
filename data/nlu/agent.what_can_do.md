@@ -12,3 +12,4 @@
 - what can you do for me?
 - what all can you do?
 - what are your features?
+- what do you know?

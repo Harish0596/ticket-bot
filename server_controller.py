@@ -1,8 +1,11 @@
 import logging
 
 from rasa_core.agent import Agent
-from rasa_core.channels.direct import CollectingOutputChannel
+from rasa_core.channels import CollectingOutputChannel
+
 from rasa_core.interpreter import RasaNLUInterpreter
+from rasa_core.utils import AvailableEndpoints
+from rasa_nlu.model import Interpreter
 
 logger = logging.getLogger(__name__)
 
@@ -72,7 +75,8 @@ class Controller:
     def _create_agent(model_directory, interpreter):
         """Creates a Rasa Agent which runs when the server is started"""
         try:
-            return Agent.load(model_directory, interpreter)
+            _endpoints = AvailableEndpoints.read_endpoints("./endpoints.yml")
+            return Agent.load(model_directory, interpreter, action_endpoint=_endpoints.action)
         except Exception as e:
             logger.warn("Failed to load any agent model. Running "
                         "Rasa Core server with out loaded model now. {}"
@@ -93,14 +97,16 @@ class Controller:
         """Sends the user message and sender_id to Rasa Core and collects the agent response"""
 
         out = CollectingOutputChannel()
-        response = self.agent.handle_message(message, output_channel=out, sender_id=sender_id)
+        response = self.agent.handle_text(message, output_channel=out, sender_id=sender_id)
         return response
 
     def get_agent_parsed_response(self, message, sender_id):
 
         """Sends the user message and sender_id to Rasa Core and collects the parsed response"""
 
-        response = self.agent.start_message_handling(message, sender_id)
+        interpreter = Interpreter.load("models/nlu/default/nlu_model")
+        response = interpreter.parse(message)
+        #response = self.agent.start_message_handling(message, sender_id)
         return response
 
     def filter_agent_response(self, query, sender_id, parsed_data, respond_data):
@@ -108,15 +114,18 @@ class Controller:
         """Filters the response sent by the agent with custom queries and also can add data for nlu training"""
 
         global intent_to_add, data_to_add
-        intent_name = parsed_data.get('tracker').get('latest_message').get('intent').get('name')
-        confidence = parsed_data.get('tracker').get('latest_message').get('intent').get('confidence') * 100
-        entities = parsed_data.get('tracker').get('latest_message').get('entities')
+        #intent_name = parsed_data.get('tracker').get('latest_message').get('intent').get('name')
+        #confidence = parsed_data.get('tracker').get('latest_message').get('intent').get('confidence') * 100
+        #entities = parsed_data.get('tracker').get('latest_message').get('entities')
+        intent_name = parsed_data.get('intent').get('name')
+        confidence = parsed_data.get('intent').get('confidence') * 100
+        entities = parsed_data.get('entities')
         try:
             status = self.users.get_user(sender_id).get('status')
         except IndexError:
             self.users.add_user(sender_id, 0)
             status = 0
-        if confidence < 20 or (intent_name == "confirmation.yes" and status == 1) or (
+        if confidence < 50 or (intent_name == "confirmation.yes" and status == 1) or (
                 intent_name == "confirmation.no" and status == 1):
 
             if intent_name == "confirmation.yes" and status == 1:
@@ -165,3 +174,4 @@ if __name__ == "__main__":
     response = c.get_agent_response("what can you do", "121")
     parsed = c.get_agent_parsed_response("what can you do", "121")
     print(c.filter_agent_response("what can you do", "121", parsed, response))
+    print(response)
